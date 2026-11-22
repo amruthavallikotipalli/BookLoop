@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>BookLoop | Buy, Rent and Sell Used Books in India</title>
+  <meta name="description" content="Buy used books cheap, rent them for a few weeks, or sell the ones you have finished. India's student-friendly circular bookstore."/>
+  
+  <!-- Preconnect & Google Fonts: Bagel Fat One, Rubik Bubbles, Fredoka, Caveat, Inter, Space Mono -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@600;700&family=Fredoka:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Rubik+Bubbles&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- BookLoop Design System Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Interactive Scripts (defer) -->
+  <script src="books.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       HEADER (BookLoop Stitch Navigation)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      
+      <!-- Brand Logo -->
+      <a class="brand-logo" href="#">
+        <svg class="brand-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>BOOKLOOP</span>
+        <span class="brand-sparkle-pill">✦</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a class="nav-link active" href="#" id="nav-home-link">Home</a>
+        <a class="nav-link" href="#featured-books" id="nav-explore-link">Explore Books</a>
+        <a class="nav-link" href="#sell" id="nav-sell-link">Sell a Book</a>
+        <a class="nav-link" href="#treasure-hunt" id="nav-hunt-link">Treasure Hunt</a>
+      </nav>
+
+      <!-- Utility Actions -->
+      <div class="header-actions">
+        <button aria-label="Search" class="header-icon-btn" id="header-search-btn" type="button">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button aria-label="Wishlist" class="header-icon-btn" id="header-wishlist-btn" type="button">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="wishlist-badge" id="wishlist-badge">0</span>
+        </button>
+        <button aria-label="Cart" class="header-icon-btn" id="header-cart-btn" type="button">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+        
+        <div class="header-divider"></div>
+
+        <button class="btn-login" id="header-login-btn" type="button">Log In</button>
+        <button class="btn-signup btn-lime-pill" id="header-signup-btn" type="button">
+          <span>Get Started</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        
+        <div class="avatar-wrap" id="header-avatar-wrap" style="position: relative;">
+          <button class="avatar-circle" id="header-avatar-btn" type="button" aria-label="User profile">BM</button>
+          <div class="avatar-dropdown" id="avatar-dropdown" style="display: none;">
+            <div class="dropdown-user-info">
+              <strong id="dropdown-user-name">Guest Reader</strong>
+              <span id="dropdown-user-email">reader@bookloop.in</span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item" id="dropdown-wishlist-btn" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              <span>My Wishlist</span>
+            </button>
+            <button class="dropdown-item" id="dropdown-orders-btn" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+              <span>My Orders</span>
+            </button>
+            <button class="dropdown-item" id="dropdown-hunt-btn" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              <span>Treasure Hunt</span>
+            </button>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item danger" id="dropdown-delete-all-listings-btn" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+              <span>Delete all my listings</span>
+            </button>
+            <button class="dropdown-item logout" id="dropdown-logout-btn" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+              <span>Log Out</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a class="brand-logo" href="#" style="gap: 8px;">
+        <svg class="brand-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>BOOKLOOP</span>
+      </a>
+      <button class="drawer-close-btn" id="mobile-nav-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <div class="mobile-user-status" id="mobile-user-status">
+      <!-- Populated dynamically with logged in user or guest prompt -->
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a class="mobile-nav-item active" href="#" id="mobile-nav-home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home</span>
+      </a>
+      <a class="mobile-nav-item" href="#featured-books-grid" id="mobile-nav-explore">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+        <span>Explore Books</span>
+      </a>
+      <a class="mobile-nav-item" href="#sell" id="mobile-nav-sell">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+        <span>Sell a Book</span>
+        <span class="mobile-nav-badge">Free</span>
+      </a>
+      <a class="mobile-nav-item" href="#treasure-hunt" id="mobile-nav-hunt">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <span>Treasure Hunt</span>
+        <span class="mobile-nav-badge gold">Hunt</span>
+      </a>
+    </nav>
+
+    <div class="mobile-nav-divider"></div>
+
+    <div class="mobile-nav-secondary">
+      <button class="mobile-nav-item" id="mobile-nav-wishlist" type="button">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <span>Saved Wishlist</span>
+        <span class="mobile-count-pill" id="mobile-wishlist-count">0</span>
+      </button>
+      <button class="mobile-nav-item" id="mobile-nav-orders" type="button">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span>My Orders &amp; Rentals</span>
+      </button>
+      <button class="mobile-nav-item" id="mobile-nav-standards" type="button">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Condition Standards</span>
+      </button>
+      <button class="mobile-nav-item danger" id="mobile-nav-delete-all" type="button" style="color: #ba1a1a;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+        <span>Delete all my listings</span>
+      </button>
+    </div>
+
+    <div class="mobile-nav-footer" id="mobile-auth-actions">
+      <!-- Injected: Login / Sign Up buttons or Log Out button -->
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- =========================================================================
+         1. HERO SECTION (Transformed with 3D Shelf from shelf-hero-reference.png)
+         ========================================================================= -->
+    <section class="hero-section">
+      
+      <!-- Soft Fluffy White Clouds (CSS / SVG) -->
+      <div class="sky-clouds-container" aria-hidden="true">
+        <div class="cloud-puff cloud-puff-1"></div>
+        <div class="cloud-puff cloud-puff-2"></div>
+        <div class="cloud-puff cloud-puff-3"></div>
+      </div>
+
+      <!-- Hero Showcase Bento Grid (Headline + Retro Computer + Slime + CD + Cursor) -->
+      <div class="hero-showcase-grid">
+        
+        <!-- Left Column: Giant Bubble Letters & Hero Actions -->
+        <div class="hero-intro-col">
+          <div class="hero-badge-pill">
+            <span class="badge-star">✦</span>
+            <span>Rent, buy or resell books</span>
+          </div>
+
+          <!-- Giant Inflated Bubble Headings (Pink, Chrome, Lime) -->
+          <h1 class="hero-bubble-title">
+            <span class="bubble-word word-pink">EVERY BOOK</span><br/>
+            <span class="bubble-word word-chrome">DESERVES</span><br/>
+            <span class="bubble-word word-lime">ANOTHER STORY.</span>
+          </h1>
+
+          <p class="hero-subtext">
+            Buy used books cheap, rent them for a few weeks, or sell the ones you've finished.
+          </p>
+
+          <!-- Hero Action CTAs -->
+          <div class="hero-cta-row">
+            <a href="#featured-books-grid" class="btn-explore-lime" id="hero-explore-cta">
+              <span>Explore Books</span>
+              <span class="cta-arrow">→</span>
+            </a>
+            <button class="btn-story-glass" id="hero-story-cta" type="button">
+              <span class="play-disc">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><polygon points="7 4 19 12 7 20 7 4"></polygon></svg>
+              </span>
+              <span>Watch Story</span>
+            </button>
+          </div>
+
+          <!-- Reader Avatars & Handwritten Annotation -->
+          <div class="hero-social-row">
+            <div class="reader-avatar-stack">
+              <span class="avatar-face av-pink">👩</span>
+              <span class="avatar-face av-lime">👨</span>
+              <span class="avatar-face av-lavender">🧑</span>
+            </div>
+            <div class="social-text-block">
+              <strong>Join 42,000+ readers across India</strong>
+              <span>saving money on textbooks &amp; novels.</span>
+            </div>
+            <!-- Handwritten Note with Arrow in Caveat -->
+            <div class="hero-handwritten-note">
+              <span class="note-arrow">⤴</span>
+              <span>more books, less scrolling :)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: 3D Retro Computer, Pink Slime, Holographic CD & Chrome Cursor Arrow -->
+        <div class="hero-objects-col" aria-hidden="true">
+          
+          <!-- Background Slime Splatter Behind Computer -->
+          <div class="slime-backdrop-blob">
+            <svg viewBox="0 0 320 320" width="340" height="340">
+              <defs>
+                <linearGradient id="slimeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff79b8"/>
+                  <stop offset="45%" stop-color="#ff1493"/>
+                  <stop offset="100%" stop-color="#c00060"/>
+                </linearGradient>
+                <filter id="slimeGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="rgba(255, 20, 147, 0.45)"/>
+                </filter>
+              </defs>
+              <path filter="url(#slimeGlow)" fill="url(#slimeGrad)" d="M70,50 C120,10 220,15 270,60 C320,110 310,210 260,260 C210,310 110,320 60,270 C10,220 20,90 70,50 Z"/>
+              <!-- Specular slime highlights -->
+              <path d="M100,55 C140,25 210,30 240,65 C220,50 160,40 115,65 Z" fill="rgba(255,255,255,0.7)"/>
+              <ellipse cx="265" cy="180" rx="14" ry="24" transform="rotate(25 265 180)" fill="rgba(255,255,255,0.5)"/>
+              <!-- Dripping Goo Drops -->
+              <circle cx="45" cy="240" r="14" fill="#ff1493"/>
+              <circle cx="48" cy="236" r="5" fill="rgba(255,255,255,0.8)"/>
+              <circle cx="280" cy="275" r="18" fill="#ff1493"/>
+              <circle cx="284" cy="270" r="6" fill="rgba(255,255,255,0.8)"/>
+            </svg>
+          </div>
+
+          <!-- The Retro Computer Monitor -->
+          <div class="retro-pc-case">
+            
+            <!-- Dripping Slime Over Top Edge -->
+            <div class="pc-slime-crown">
+              <svg viewBox="0 0 240 70" width="240" height="70">
+                <defs>
+                  <linearGradient id="crownGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#ff94ca"/>
+                    <stop offset="50%" stop-color="#ff1493"/>
+                    <stop offset="100%" stop-color="#d4006c"/>
+                  </linearGradient>
+                </defs>
+                <path d="M10,0 Q120,-10 230,0 Q235,35 210,35 Q190,35 180,55 Q170,70 155,50 Q145,35 130,42 Q115,50 105,62 Q95,72 85,50 Q75,30 50,45 Q30,55 20,30 Q10,15 10,0 Z" fill="url(#crownGrad)"/>
+                <path d="M25,8 Q120,-4 215,8 Q190,18 160,12 Q120,6 80,14 Q45,20 25,8 Z" fill="rgba(255,255,255,0.85)"/>
+              </svg>
+            </div>
+
+            <!-- Sticky Note on Monitor -->
+            <div class="pc-sticker-sticky">
+              <span>GOOD BOOKS ALWAYS WIN ✦</span>
+            </div>
+
+            <!-- Floating 3D Pink Heart -->
+            <div class="pc-heart-3d">
+              <svg viewBox="0 0 40 40" width="34" height="34">
+                <defs>
+                  <radialGradient id="heartGrad" cx="35%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#ffb3d9"/>
+                    <stop offset="45%" stop-color="#ff1493"/>
+                    <stop offset="100%" stop-color="#a80050"/>
+                  </radialGradient>
+                </defs>
+                <path d="M20,35 C5,23 0,14 5,7 C10,0 17,2 20,8 C23,2 30,0 35,7 C40,14 35,23 20,35 Z" fill="url(#heartGrad)" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.25))"/>
+                <ellipse cx="12" cy="9" rx="3.5" ry="2" transform="rotate(-30 12 9)" fill="rgba(255,255,255,0.85)"/>
+              </svg>
+            </div>
+
+            <!-- Chrome Star on Monitor Corner -->
+            <div class="pc-chrome-star-icon">
+              <svg viewBox="0 0 36 36" width="34" height="34">
+                <defs>
+                  <linearGradient id="starFacet1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="100%" stop-color="#94a3b8"/>
+                  </linearGradient>
+                  <linearGradient id="starFacet2" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#e2e8f0"/>
+                    <stop offset="100%" stop-color="#475569"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="18,0 23,13 36,18 23,23 18,36 13,23 0,18 13,13" fill="url(#starFacet1)" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.3))"/>
+                <polygon points="18,0 23,13 18,18 13,13" fill="#ffffff"/>
+                <polygon points="18,18 23,23 18,36 13,23" fill="url(#starFacet2)"/>
+              </svg>
+            </div>
+
+            <!-- CRT Screen Bezel -->
+            <div class="pc-bezel">
+              <div class="pc-crt-screen">
+                <div class="pc-scanlines"></div>
+                <div class="pc-screen-glare"></div>
+                <!-- Glowing Pixel Smiley Face -->
+                <div class="pixel-smiley-face">
+                  <svg viewBox="0 0 32 32" width="60" height="60">
+                    <rect x="7" y="6" width="5" height="11" rx="2" fill="#ccff00"/>
+                    <rect x="20" y="6" width="5" height="11" rx="2" fill="#ccff00"/>
+                    <path d="M7 21h4v4h10v-4h4v7h-4v-3H11v3H7z" fill="#ccff00"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floppy Bay with "bookloop" and Hand Cursor -->
+            <div class="pc-bottom-bay">
+              <div class="pc-floppy-badge">
+                <span class="badge-label">bookloop</span>
+                <span class="badge-light"></span>
+              </div>
+              <div class="pc-hand-cursor">👆</div>
+            </div>
+          </div>
+
+          <!-- Holographic Rainbow CD with Smiley Center -->
+          <div class="holographic-cd">
+            <div class="cd-rainbow-ring"></div>
+            <div class="cd-radial-glint"></div>
+            <div class="cd-label-ring">
+              <span class="cd-text">BOOKLOOP INDIA</span>
+            </div>
+            <div class="cd-center-spindle">
+              <div class="cd-spindle-hole">
+                <span class="spindle-smiley">☺</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Giant 3D Bevelled Chrome Cursor Arrow -->
+          <div class="big-3d-cursor">
+            <svg viewBox="0 0 54 64" width="76" height="88">
+              <defs>
+                <linearGradient id="cursorChrome1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="25%" stop-color="#f8fafc"/>
+                  <stop offset="50%" stop-color="#94a3b8"/>
+                  <stop offset="75%" stop-color="#ffffff"/>
+                  <stop offset="100%" stop-color="#64748b"/>
+                </linearGradient>
+                <linearGradient id="cursorDarkEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#334155"/>
+                  <stop offset="100%" stop-color="#020617"/>
+                </linearGradient>
+                <filter id="cursor3dGlow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feDropShadow dx="2" dy="14" stdDeviation="12" flood-color="rgba(15,23,42,0.45)"/>
+                </filter>
+              </defs>
+              <g filter="url(#cursor3dGlow)">
+                <!-- Extruded 3D Shadow Edge -->
+                <polygon points="5,5 5,46 16,36 27,55 35,51 24,32 37,32" fill="url(#cursorDarkEdge)"/>
+                <!-- Shiny Chrome Face -->
+                <polygon points="2,0 2,42 13,32 24,51 32,47 21,28 34,28" fill="url(#cursorChrome1)" stroke="#ffffff" stroke-width="1.8"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Floating Little Stars -->
+          <span class="sparkle-star-float st-1">✦</span>
+          <span class="sparkle-star-float st-2">✦</span>
+          <span class="sparkle-star-float st-3">★</span>
+
+        </div>
+
+      </div>
+
+      <!-- Genre Filter Tabs (Sliding indicator + Forest Green #244C3B) -->
+      <nav aria-label="Genre Filter" class="genre-tabs-bar" id="genre-tabs-bar">
+        <div class="tab-indicator" id="tab-indicator"></div>
+        <button class="genre-tab-btn active" data-genre="all" type="button">ALL</button>
+        <button class="genre-tab-btn" data-genre="fiction" type="button">FICTION</button>
+        <button class="genre-tab-btn" data-genre="non-fiction" type="button">NON-FICTION</button>
+        <button class="genre-tab-btn" data-genre="mystery" type="button">MYSTERY</button>
+        <button class="genre-tab-btn" data-genre="sci-fi" type="button">SCI-FI</button>
+        <button class="genre-tab-btn" data-genre="self-help" type="button">SELF-HELP</button>
+      </nav>
+
+      <!-- THE 3D BOOKSHELF (36 Cuboids, Endless Loop, 3D Physical Rotation) -->
+      <section aria-label="BookLoop Bookshelf" class="hero-shelf-container" id="shelf-container">
+        
+        <!-- Left Navigation Arrow -->
+        <button aria-label="Previous book" class="shelf-arrow-btn prev" id="shelf-prev" type="button">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+
+        <!-- Right Navigation Arrow -->
+        <button aria-label="Next book" class="shelf-arrow-btn next" id="shelf-next" type="button">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+
+        <!-- The 3D Stage -->
+        <div class="shelf-3d-stage" id="shelf-3d-stage">
+          <div class="stage" id="stage-3d">
+            <!-- 36 3D Tape Cuboids rendered dynamically by script.js -->
+          </div>
+
+          <!-- Floating Play Ring / Open Indicator on Active Cover -->
+          <button aria-label="Open Book Detail" class="hero-play-ring" id="hero-play-ring" type="button">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="7 4 19 12 7 20 7 4"></polygon></svg>
+          </button>
+        </div>
+
+        <!-- Architectural Shelf Baseline Plank -->
+        <div class="shelf-baseline-plank">
+          <div class="shelf-plank-shadow"></div>
+        </div>
+      </section>
+
+      <!-- BELOW THE SHELF: Masked Slide Caption Stack with Playfair Display & BUY / RENT CTAs -->
+      <div aria-live="polite" class="shelf-caption-stack">
+        <!-- Masked Title Line -->
+        <div class="caption-line-mask title-mask">
+          <div class="caption-slot" id="caption-title-slot">
+            <h3 class="caption-title" id="caption-title">The Midnight Library</h3>
+          </div>
+        </div>
+        
+        <!-- Masked Metadata Line -->
+        <div class="caption-line-mask meta-mask">
+          <div class="caption-slot" id="caption-meta-slot">
+            <div class="caption-metadata" id="caption-meta">
+              <span class="caption-bullet"></span>
+              <span>MATT HAIG · LIKE NEW</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Masked Pricing Line -->
+        <div class="caption-line-mask price-mask">
+          <div class="caption-slot" id="caption-price-slot">
+            <p class="caption-pricing" id="caption-pricing">
+              <span class="price-buy">BUY ₹299</span> <span style="color: var(--outline); font-weight: 300; margin: 0 6px;">·</span> <span class="price-rent">RENT ₹40/week</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Prominent BUY & RENT Action Buttons (Forest Green #244C3B) -->
+        <div class="hero-cta-buttons">
+          <button class="btn-hero-buy" id="hero-buy-btn" type="button">BUY</button>
+          <button class="btn-hero-rent" id="hero-rent-btn" type="button">RENT</button>
+          <button class="btn-hero-sell" id="hero-sell-btn" type="button">SELL</button>
+        </div>
+
+        <!-- Minimal Subtitle Footer Strip -->
+        <div class="hero-footer-strip">
+          <span>&copy; 2026 BOOKLOOP</span>
+          <div style="display: flex; gap: 16px;">
+            <a href="#instagram" data-info="instagram">INSTAGRAM</a>
+            <span>/</span>
+            <a href="#twitter" data-info="twitter">X</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =========================================================================
+         2. SEARCH & DISCOVERY BAR (Stitch Design)
+         ========================================================================= -->
+    <!-- Slow-moving Marquee Strip of Genre Names (Glossy Y2K Ticker) -->
+    <div class="genre-marquee-ribbon" aria-hidden="true">
+      <div class="genre-marquee-track">
+        <span class="marquee-item">✦ FICTION &amp; LITERATURE</span>
+        <span class="marquee-item">✦ VINTAGE &amp; CLASSICS</span>
+        <span class="marquee-item">✦ SCI-FI &amp; FANTASY</span>
+        <span class="marquee-item">✦ PHILOSOPHY &amp; MIND</span>
+        <span class="marquee-item">✦ COLLEGE TEXTBOOKS</span>
+        <span class="marquee-item">✦ BUY, RENT &amp; RESELL</span>
+        <span class="marquee-item">✦ MEMOIRS &amp; BIOGRAPHIES</span>
+        <span class="marquee-item">✦ READ, SHARE &amp; SAVE</span>
+        <!-- Marquee Loop Duplicate -->
+        <span class="marquee-item">✦ FICTION &amp; LITERATURE</span>
+        <span class="marquee-item">✦ VINTAGE &amp; CLASSICS</span>
+        <span class="marquee-item">✦ SCI-FI &amp; FANTASY</span>
+        <span class="marquee-item">✦ PHILOSOPHY &amp; MIND</span>
+        <span class="marquee-item">✦ COLLEGE TEXTBOOKS</span>
+        <span class="marquee-item">✦ BUY, RENT &amp; RESELL</span>
+        <span class="marquee-item">✦ MEMOIRS &amp; BIOGRAPHIES</span>
+        <span class="marquee-item">✦ READ, SHARE &amp; SAVE</span>
+      </div>
+    </div>
+
+    <div class="search-bar-wrap">
+      <!-- Playful Section Header with Inflated Heading & Doodle -->
+      <div class="search-header-interactive">
+        <span class="search-bubble-pill">✦ QUICK SEARCH ✦</span>
+        <h2 class="search-section-heading inflated-heading">Find a Book</h2>
+        <div class="search-doodle-note">
+          <span class="doodle-arrow">⤴</span> search by title, author or genre
+        </div>
+      </div>
+
+      <div class="search-bar-card glass-card">
+        <!-- Playful Sticker Notes -->
+        <div class="sticker-note sticker-green search-sticker-left">
+          <span>GOOD BOOKS ALWAYS WIN ✦</span>
+        </div>
+        <div class="sticker-note sticker-orange search-sticker-right">
+          <span>✦ 100% CIRCULAR</span>
+        </div>
+        
+        <!-- Search input -->
+        <div class="search-input-field">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--forest-green)" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input id="book-search-input" placeholder="Search books, authors or genres..." type="text"/>
+        </div>
+
+        <div class="search-divider-v"></div>
+
+        <!-- Facet Category Dropdown -->
+        <div class="search-category-dropdown">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+          <select>
+            <option>All Categories</option>
+            <option>Fiction &amp; Literature</option>
+            <option>Non-Fiction</option>
+            <option>Self-Help &amp; Mindset</option>
+            <option>Classics &amp; Vintage</option>
+          </select>
+        </div>
+
+        <!-- Buy / Rent Segmented Toggle -->
+        <div class="search-buy-rent-toggle">
+          <button class="buy-rent-toggle-btn active" type="button">Buy</button>
+          <button class="buy-rent-toggle-btn" type="button">Rent</button>
+        </div>
+
+        <!-- Search Submit CTA -->
+        <button class="btn-search-submit btn-pill-glossy" type="button">
+          <span>Search</span>
+          <span style="font-size: 14px;">✦</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         3. BROWSE BY GENRE (8 Categories)
+         ========================================================================= -->
+    <section class="section-browse-genres" id="explore">
+      <div class="section-header-row">
+        <div>
+          <span class="section-eyebrow">Genres</span>
+          <h2 class="section-title">Find Your Next Favourite</h2>
+          <p class="section-desc">Explore thousands of cataloged stories across every genre.</p>
+        </div>
+        <div class="genre-aisles-counter">
+          <span>8 categories</span>
+          <div class="genre-carousel-nav">
+            <button aria-label="Previous genre" class="btn-carousel-circle" id="genre-prev" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button aria-label="Next genre" class="btn-carousel-circle" id="genre-next" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 Genre Cards Grid with 3D Mini Spines -->
+      <div class="genres-grid">
+        
+        <!-- Card 1: Romance -->
+        <div class="genre-card" data-genre="fiction">
+          <div class="genre-card-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="heart-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ff9ec6"/>
+                  <stop offset="50%" stop-color="#ff2a85"/>
+                  <stop offset="100%" stop-color="#d4006a"/>
+                </linearGradient>
+              </defs>
+              <path d="M22 38s-14-8.5-14-18c0-5 4-9 8-9 2.8 0 4.8 1.5 6 3.5 1.2-2 3.2-3.5 6-3.5 4 0 8 4 8 9 0 9.5-14 18-14 18z" fill="url(#heart-grad)" stroke="#fff" stroke-width="1.5"/>
+              <ellipse cx="16" cy="17" rx="3" ry="2" fill="rgba(255,255,255,0.35)" transform="rotate(-20 16 17)"/>
+            </svg>
+          </div>
+          <div class="genre-card-text">
+            <h3>Romance</h3>
+            <p class="genre-card-count">3,420 titles</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Mystery & Thriller -->
+        <div class="genre-card" data-genre="mystery">
+          <div class="genre-card-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="mag-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#4a5568"/>
+                  <stop offset="50%" stop-color="#2d3748"/>
+                  <stop offset="100%" stop-color="#1a202c"/>
+                </linearGradient>
+              </defs>
+              <circle cx="19" cy="19" r="10" fill="url(#mag-grad)" stroke="#fff" stroke-width="1.5"/>
+              <ellipse cx="15" cy="15" rx="4" ry="3" fill="rgba(255,255,255,0.2)" transform="rotate(-25 15 15)"/>
+              <line x1="26.5" y1="26.5" x2="36" y2="36" stroke="url(#mag-grad)" stroke-width="4" stroke-linecap="round"/>
+              <line x1="27" y1="27" x2="35" y2="35" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="genre-card-text">
+            <h3>Mystery &amp; Thriller</h3>
+            <p class="genre-card-count">2,890 titles</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Fantasy -->
+        <div class="genre-card" data-genre="fiction">
+          <div class="genre-card-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="star-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ffe066"/>
+                  <stop offset="50%" stop-color="#ffc800"/>
+                  <stop offset="100%" stop-color="#d4a000"/>
+                </linearGradient>
+              </defs>
+              <path d="M22 4l5 12h13l-10.5 8 4 12.5L22 29l-11.5 7.5 4-12.5L4 16h13z" fill="url(#star-grad)" stroke="#fff" stroke-width="1.2"/>
+              <path d="M18 14l4-7 4 7h-8z" fill="rgba(255,255,255,0.35)"/>
+            </svg>
+          </div>
+          <div class="genre-card-text">
+            <h3>Fantasy</h3>
+            <p class="genre-card-count">4,120 titles</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Horror -->
+        <div class="genre-card" data-genre="mystery">
+          <div class="genre-card-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ghost-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#d8b4fe"/>
+                  <stop offset="50%" stop-color="#a855f7"/>
+                  <stop offset="100%" stop-color="#7c3aed"/>
+                </linearGradient>
+              </defs>
+              <path d="M14 40v-4c0 0-2-2-2-6v-8c0-6 4.5-14 10-14s10 8 10 14v8c0 4-2 6-2 6v4l-3-3-2.5 3-2.5-3-2.5 3-2.5-3-3 3z" fill="url(#ghost-grad)" stroke="#fff" stroke-width="1.2"/>
+              <circle cx="18" cy="20" r="2.5" fill="#1a0533"/>
+              <circle cx="26" cy="20" r="2.5" fill="#1a0533"/>
+              <ellipse cx="17" cy="15" rx="3.5" ry="2" fill="rgba(255,255,255,0.25)" transform="rotate(-15 17 15)"/>
+            </svg>
+          </div>
+          <div class="genre-card-text">
+            <h3>Horror</h3>
+            <p class="genre-card-count">1,340 titles</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Science Fiction -->
+        <div class="genre-card" data-genre="sci-fi">
+          <div class="genre-card-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="rocket-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#93c5fd"/>
+                  <stop offset="50%" stop-color="#3b82f6"/>
+                  <stop offset="100%" stop-color="#1d4ed8"/>
+                </linearGradient>
+              </defs>
+              <path d="M22 4c0 0-8 8-8 22h4l4 10 4-10h4c0-14-8-22-8-22z" fill="url(#rocket-grad)" stroke="#fff" stroke-width="1.2"/>
+              <ellipse cx="22" cy="20" rx="3" ry="3" fill="#e0f2fe" stroke="#93c5fd" stroke-width="0.8"/>
+              <path d="M14 26l-4 6 6-2" fill="#f97316"/>
+              <path d="M30 26l4 6-6-2" fill="#f97316"/>
+              <ellipse cx="20" cy="12" rx="2.5" ry="4" fill="rgba(255,255,255,0.3)" transform="rotate(-10 20 12)"/>
+            </svg>
+          </div>
+          <div class="genre-card-text">
+            <h3>Science Fiction</h3>
+            <p class="genre-card-count">2,650 titles</p>
+          </div>
+        </div>
+
+        <!-- Card 6: Adventure -->
+        <div class="genre-card" data-genre="fiction">
+          <div class="genre-card-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="compass-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#fdba74"/>
+                  <stop offset="50%" stop-color="#f97316"/>
+                  <stop offset="100%" stop-color="#c2410c"/>
+                </linearGradient>
+              </defs>
+              <circle cx="22" cy="22" r="16" fill="url(#compass-grad)" stroke="#fff" stroke-width="1.5"/>
+              <circle cx="22" cy="22" r="12" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+              <polygon points="22,8 24.5,20 22,22 19.5,20" fill="#fff"/>
+              <polygon points="22,36 19.5,24 22,22 24.5,24" fill="rgba(0,0,0,0.3)"/>
+              <polygon points="8,22 20,19.5 22,22 20,24.5" fill="rgba(255,255,255,0.5)"/>
+              <polygon points="36,22 24,24.5 22,22 24,19.5" fill="rgba(0,0,0,0.2)"/>
+              <circle cx="22" cy="22" r="2.5" fill="#fff"/>
+              <ellipse cx="17" cy="14" rx="5" ry="3.5" fill="rgba(255,255,255,0.2)" transform="rotate(-30 17 14)"/>
+            </svg>
+          </div>
+          <div class="genre-card-text">
+            <h3>Adventure</h3>
+            <p class="genre-card-count">1,980 titles</p>
+          </div>
+        </div>
+
+        <!-- Card 7: Fiction -->
+        <div class="genre-card" data-genre="fiction">
+          <div class="genre-card-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="book-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#86efac"/>
+                  <stop offset="50%" stop-color="#22c55e"/>
+                  <stop offset="100%" stop-color="#15803d"/>
+                </linearGradient>
+              </defs>
+              <path d="M6 10c4-2 8-2 16 2v24c-8-4-12-4-16-2V10z" fill="url(#book-grad)" stroke="#fff" stroke-width="1.2"/>
+              <path d="M38 10c-4-2-8-2-16 2v24c8-4 12-4 16-2V10z" fill="url(#book-grad)" stroke="#fff" stroke-width="1.2"/>
+              <path d="M8 14c3-1 6-1 12 1.5" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+              <path d="M8 18c3-1 6-1 12 1.5" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+              <path d="M8 22c3-1 6-1 12 1.5" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+              <ellipse cx="13" cy="12" rx="4" ry="2" fill="rgba(255,255,255,0.25)" transform="rotate(-10 13 12)"/>
+            </svg>
+          </div>
+          <div class="genre-card-text">
+            <h3>Fiction</h3>
+            <p class="genre-card-count">5,630 titles</p>
+          </div>
+        </div>
+
+        <!-- Card 8: Educational -->
+        <div class="genre-card" data-genre="non-fiction">
+          <div class="genre-card-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="bulb-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#d9f99d"/>
+                  <stop offset="50%" stop-color="#a3e635"/>
+                  <stop offset="100%" stop-color="#65a30d"/>
+                </linearGradient>
+              </defs>
+              <path d="M22 4c-7 0-12 5.5-12 12 0 4.5 2.5 8 6 10v4h12v-4c3.5-2 6-5.5 6-10 0-6.5-5-12-12-12z" fill="url(#bulb-grad)" stroke="#fff" stroke-width="1.2"/>
+              <rect x="17" y="32" width="10" height="3" rx="1.5" fill="#65a30d" stroke="#fff" stroke-width="0.8"/>
+              <rect x="18" y="36" width="8" height="2" rx="1" fill="#65a30d" stroke="#fff" stroke-width="0.8"/>
+              <ellipse cx="18" cy="12" rx="4" ry="5" fill="rgba(255,255,255,0.3)" transform="rotate(-15 18 12)"/>
+              <line x1="22" y1="18" x2="22" y2="28" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+              <line x1="18" y1="22" x2="26" y2="22" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="genre-card-text">
+            <h3>Educational</h3>
+            <p class="genre-card-count">3,110 titles</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. FEATURED BOOKS ("Stories Worth Sharing" - 6 CSS Cover Cards)
+         ========================================================================= -->
+    <section class="section-featured-books">
+      <div class="section-header-row">
+        <div>
+          <span class="section-eyebrow">Featured</span>
+          <h2 class="section-title">Stories Worth Sharing</h2>
+          <p class="section-desc">Popular pre-loved books from readers near you.</p>
+        </div>
+        <a class="view-all-link" href="#">
+          <span>View All 1,840 Active Listings</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <!-- 6-Card Responsive Grid with Rich CSS Book Covers -->
+      <div class="books-grid" id="featured-books-grid">
+        
+        <!-- CARD 1: The Midnight Library -->
+        <div class="book-card">
+          <div>
+            <div class="book-card-cover cover-midnight-library">
+              <button aria-label="Add to wishlist" class="card-wishlist-btn" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <div class="cover-header-meta">
+                <span class="cover-header-tag">BOOKLOOP</span>
+                <span style="color: #deb05c;"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+              </div>
+              <div class="cover-center-motif">
+                <div class="cover-icon-emblem" style="color: #deb05c; border-color: #deb05c66;">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path><circle cx="17" cy="6" r="1" fill="currentColor"></circle></svg>
+                </div>
+                <h4 class="cover-title" style="font-size: 17px;">The Midnight<br/>Library</h4>
+                <p class="cover-author">Matt Haig</p>
+              </div>
+              <div class="cover-footer-meta">
+                <span class="cover-edition-tag">Clothbound Hardcover</span>
+                <span class="cover-price-badge">₹299</span>
+              </div>
+            </div>
+            <div class="book-card-meta">
+              <div class="book-card-meta-row">
+                <span>Matt Haig</span>
+                <span class="book-condition-badge">LIKE NEW</span>
+              </div>
+              <h3 class="book-card-title">The Midnight Library</h3>
+              <p class="book-card-price">₹299 / ₹40 per week</p>
+            </div>
+          </div>
+          <div class="book-card-actions">
+            <button class="btn-card-buy" type="button">BUY</button>
+            <button class="btn-card-rent" type="button">RENT</button>
+          </div>
+        </div>
+
+        <!-- CARD 2: Atomic Habits -->
+        <div class="book-card">
+          <div>
+            <div class="book-card-cover cover-atomic-habits">
+              <button aria-label="Add to wishlist" class="card-wishlist-btn" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <div class="cover-header-meta">
+                <span class="cover-header-tag" style="color: #885117;">BOOKLOOP</span>
+                <span style="color: #d97c55;"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+              </div>
+              <div class="cover-center-motif">
+                <div class="cover-icon-emblem" style="color: #d97c55; border-color: #d97c5566;">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3" fill="currentColor"></circle><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(30 12 12)"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-30 12 12)"></ellipse></svg>
+                </div>
+                <h4 class="cover-title" style="font-size: 17px; color: #1b1c18;">Atomic Habits</h4>
+                <p class="cover-author" style="color: #414844;">James Clear</p>
+              </div>
+              <div class="cover-footer-meta" style="border-top-color: rgba(217,124,85,0.3);">
+                <span class="cover-edition-tag" style="color: #77766F;">Hardcover Edition</span>
+                <span class="cover-price-badge" style="color: #885117;">₹350</span>
+              </div>
+            </div>
+            <div class="book-card-meta">
+              <div class="book-card-meta-row">
+                <span>James Clear</span>
+                <span class="book-condition-badge">LIKE NEW</span>
+              </div>
+              <h3 class="book-card-title">Atomic Habits</h3>
+              <p class="book-card-price">₹350 / ₹50 per week</p>
+            </div>
+          </div>
+          <div class="book-card-actions">
+            <button class="btn-card-buy" type="button">BUY</button>
+            <button class="btn-card-rent" type="button">RENT</button>
+          </div>
+        </div>
+
+        <!-- CARD 3: The Silent Patient -->
+        <div class="book-card">
+          <div>
+            <div class="book-card-cover cover-silent-patient">
+              <button aria-label="Add to wishlist" class="card-wishlist-btn" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <div class="cover-header-meta">
+                <span class="cover-header-tag" style="color: #ba1a1a;">MYSTERY</span>
+                <span style="color: #ffdcc0;"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+              </div>
+              <div class="cover-center-motif">
+                <div class="cover-icon-emblem" style="color: #ffdcc0; border-color: rgba(255,220,192,0.4);">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a5 5 0 0 0-5 5c0 2.5 1.5 4.5 3.5 5.5V17H9v3h6v-3h-1.5v-4.5C15.5 11.5 17 9.5 17 7a5 5 0 0 0-5-5z"></path></svg>
+                </div>
+                <h4 class="cover-title" style="font-size: 17px;">The Silent<br/>Patient</h4>
+                <p class="cover-author">Alex Michaelides</p>
+              </div>
+              <div class="cover-footer-meta" style="border-top-color: rgba(255,255,255,0.2);">
+                <span class="cover-edition-tag">Special Mystery Cut</span>
+                <span class="cover-price-badge" style="color: #ffdcc0;">₹250</span>
+              </div>
+            </div>
+            <div class="book-card-meta">
+              <div class="book-card-meta-row">
+                <span>Alex Michaelides</span>
+                <span class="book-condition-badge">GOOD</span>
+              </div>
+              <h3 class="book-card-title">The Silent Patient</h3>
+              <p class="book-card-price">₹250 / ₹35 per week</p>
+            </div>
+          </div>
+          <div class="book-card-actions">
+            <button class="btn-card-buy" type="button">BUY</button>
+            <button class="btn-card-rent" type="button">RENT</button>
+          </div>
+        </div>
+
+        <!-- CARD 4: Ikigai -->
+        <div class="book-card">
+          <div>
+            <div class="book-card-cover cover-ikigai">
+              <button aria-label="Add to wishlist" class="card-wishlist-btn" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <div class="cover-header-meta">
+                <span class="cover-header-tag" style="color: #60725a;">PHILOSOPHY</span>
+                <span style="color: #885117;"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+              </div>
+              <div class="cover-center-motif">
+                <div class="cover-icon-emblem" style="color: #ba1a1a; border-color: rgba(186,26,26,0.3);">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c-1.5 2-1 4 0 6 1-2 1.5-4 0-6z"></path><path d="M12 21c-1.5-2-1-4 0-6 1 2 1.5 4 0 6z"></path><path d="M3 12c2-1.5 4-1 6 0-2 1-4 1.5-6 0z"></path><path d="M21 12c-2-1.5-4-1-6 0 2 1 4 1.5 6 0z"></path><circle cx="12" cy="12" r="2.5" fill="currentColor"></circle></svg>
+                </div>
+                <h4 class="cover-title" style="font-size: 19px; color: #1b1c18; letter-spacing: 0.08em;">IKIGAI</h4>
+                <p class="cover-author" style="color: #414844;">Héctor García</p>
+              </div>
+              <div class="cover-footer-meta" style="border-top-color: rgba(0,0,0,0.1);">
+                <span class="cover-edition-tag" style="color: #77766F;">Parchment Hardcover</span>
+                <span class="cover-price-badge" style="color: #885117;">₹220</span>
+              </div>
+            </div>
+            <div class="book-card-meta">
+              <div class="book-card-meta-row">
+                <span>Héctor García</span>
+                <span class="book-condition-badge">LIKE NEW</span>
+              </div>
+              <h3 class="book-card-title">Ikigai</h3>
+              <p class="book-card-price">₹220 / ₹30 per week</p>
+            </div>
+          </div>
+          <div class="book-card-actions">
+            <button class="btn-card-buy" type="button">BUY</button>
+            <button class="btn-card-rent" type="button">RENT</button>
+          </div>
+        </div>
+
+        <!-- CARD 5: The Alchemist -->
+        <div class="book-card">
+          <div>
+            <div class="book-card-cover cover-the-alchemist">
+              <button aria-label="Add to wishlist" class="card-wishlist-btn" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <div class="cover-header-meta">
+                <span class="cover-header-tag" style="color: #2d1600;">CLASSIC</span>
+                <span style="color: #2d1600;"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+              </div>
+              <div class="cover-center-motif">
+                <div class="cover-icon-emblem" style="color: #ffdcc0; border-color: rgba(255,220,192,0.4);">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4" fill="currentColor"></circle><path d="M2 19c4-4 8-1 12-4 3 2 6 3 8 4"></path><path d="M2 22h20"></path></svg>
+                </div>
+                <h4 class="cover-title" style="font-size: 17px; color: #2d1600;">The Alchemist</h4>
+                <p class="cover-author" style="color: #2d1600;">Paulo Coelho</p>
+              </div>
+              <div class="cover-footer-meta" style="border-top-color: rgba(45,22,0,0.25);">
+                <span class="cover-edition-tag" style="color: #2d1600;">Illustrated Edition</span>
+                <span class="cover-price-badge" style="color: #2d1600;">₹199</span>
+              </div>
+            </div>
+            <div class="book-card-meta">
+              <div class="book-card-meta-row">
+                <span>Paulo Coelho</span>
+                <span class="book-condition-badge">GOOD</span>
+              </div>
+              <h3 class="book-card-title">The Alchemist</h3>
+              <p class="book-card-price">₹199 / ₹25 per week</p>
+            </div>
+          </div>
+          <div class="book-card-actions">
+            <button class="btn-card-buy" type="button">BUY</button>
+            <button class="btn-card-rent" type="button">RENT</button>
+          </div>
+        </div>
+
+        <!-- CARD 6: Harry Potter -->
+        <div class="book-card">
+          <div>
+            <div class="book-card-cover cover-harry-potter">
+              <button aria-label="Add to wishlist" class="card-wishlist-btn" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <div class="cover-header-meta">
+                <span class="cover-header-tag" style="color: #deb05c;">DELUXE</span>
+                <span style="color: #deb05c;"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+              </div>
+              <div class="cover-center-motif">
+                <div class="cover-icon-emblem" style="color: #deb05c; border-color: #deb05c66;">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg>
+                </div>
+                <h4 class="cover-title" style="font-size: 17px; color: #ffdcc0;">Harry Potter</h4>
+                <p class="cover-author" style="color: #deb05c;">J.K. Rowling</p>
+              </div>
+              <div class="cover-footer-meta" style="border-top-color: rgba(222,176,92,0.3);">
+                <span class="cover-edition-tag">Gold Embossed</span>
+                <span class="cover-price-badge" style="color: #deb05c;">₹399</span>
+              </div>
+            </div>
+            <div class="book-card-meta">
+              <div class="book-card-meta-row">
+                <span>J.K. Rowling</span>
+                <span class="book-condition-badge">LIKE NEW</span>
+              </div>
+              <h3 class="book-card-title">Harry Potter</h3>
+              <p class="book-card-price">₹399 / ₹60 per week</p>
+            </div>
+          </div>
+          <div class="book-card-actions">
+            <button class="btn-card-buy" type="button">BUY</button>
+            <button class="btn-card-rent" type="button">RENT</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. HOW BOOKLOOP WORKS (Circular Elegance - 3 Steps)
+         ========================================================================= -->
+    <section class="section-how-it-works">
+      <div class="how-bento-grid">
+        <!-- Wide lime card spanning 2 columns -->
+        <div class="how-bento-wide how-lime-card">
+          <span class="how-eyebrow-tag">SIMPLE PROCESS</span>
+          <h2 class="how-pixel-heading">HOW BOOKLOOP WORKS</h2>
+          <p class="how-wide-desc">Three simple steps to buy, rent, and share books.</p>
+          <div class="how-step-row">
+            <div class="how-step-num">01</div>
+            <div>
+              <h3 class="how-step-name">Browse</h3>
+              <p class="how-step-text">Search for books by college courses, authors, or genres. Check photos and conditions before you order.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Step 2 glass card -->
+        <div class="how-bento-small glass-card">
+          <div class="step-num-badge badge-2">02</div>
+          <h3 class="step-title">Rent or Buy</h3>
+          <p class="step-desc">Rent for a few weeks to finish an exam or novel, or buy it outright to keep on your shelf.</p>
+        </div>
+        <!-- Step 3 glass card -->
+        <div class="how-bento-small glass-card">
+          <div class="step-num-badge badge-3">03</div>
+          <h3 class="step-title">Sell When Done</h3>
+          <p class="step-desc">List books you no longer need in 60 seconds. Set your own price, get paid, and clear space.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. BOOK TREASURE HUNT (Community Literary Quest)
+         ========================================================================= -->
+    <section class="section-treasure-hunt" id="treasure-hunt">
+      <div class="treasure-hunt-card y2k-hunt-banner">
+        
+        <!-- Left Column: Lime side with Pixel Heading, New Tag, Black Pill -->
+        <div class="hunt-left-col">
+          <div class="hunt-tag-row">
+            <span class="hunt-new-tag">Treasure Hunt</span>
+          </div>
+
+          <h2 class="hunt-pixel-heading">
+            TURN READING<br/>
+            INTO AN ADVENTURE <span class="hunt-doodle-star">★</span>
+          </h2>
+
+          <p class="hunt-lead-desc">
+            Follow weekly clues to hidden books around your city. Scan the QR code on the book to earn points and rental discounts.
+          </p>
+
+          <div class="hunt-actions-group">
+            <button class="btn-start-hunt btn-hunt-black-pill" id="btn-start-hunt" type="button">
+              <span>Start the Hunt</span>
+              <span class="btn-arrow">→</span>
+            </button>
+            <div class="hunt-clue-pill">
+              <span class="pulse-dot-lime"></span>
+              <span>Next Clue Drops Sat 10:00 AM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Lavender side with Cassette, Pink Slime Shape, Glossy Stars -->
+        <div class="hunt-right-col">
+          <!-- Background Droplets & Pink Slime Shape -->
+          <div class="hunt-slime-container" aria-hidden="true">
+            <svg class="hunt-slime-svg" viewBox="0 0 340 260" width="100%" height="100%">
+              <defs>
+                <linearGradient id="huntSlimeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff99cf"/>
+                  <stop offset="45%" stop-color="#ff2a85"/>
+                  <stop offset="100%" stop-color="#c2005c"/>
+                </linearGradient>
+                <filter id="huntSlimeGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="rgba(255, 42, 133, 0.45)"/>
+                </filter>
+              </defs>
+              <path filter="url(#huntSlimeGlow)" fill="url(#huntSlimeGrad)" d="M40,30 C90,10 240,5 290,45 C340,85 330,190 280,225 C230,260 110,255 55,220 C5,185 10,60 40,30 Z"/>
+              <path d="M75,35 C120,18 220,15 260,50 C230,35 150,28 90,48 Z" fill="rgba(255,255,255,0.7)"/>
+              <ellipse cx="280" cy="150" rx="12" ry="20" transform="rotate(25 280 150)" fill="rgba(255,255,255,0.45)"/>
+              <circle cx="35" cy="210" r="12" fill="#ff2a85"/>
+              <circle cx="37" cy="207" r="4" fill="rgba(255,255,255,0.8)"/>
+              <circle cx="305" cy="225" r="15" fill="#ff2a85"/>
+            </svg>
+          </div>
+
+          <!-- Glossy 3D Cassette / Quest Badge (Matching the Playback Cassette in Reference) -->
+          <div class="hunt-cassette-card" id="ticket-qr-trigger" title="Click to launch Treasure Quest scanner">
+            <div class="cassette-top-row">
+              <span class="cassette-brand">PLAYBACKS №1</span>
+              <span class="cassette-chip">TICKET #408</span>
+            </div>
+            <div class="cassette-body">
+              <div class="cassette-window">
+                <div class="cassette-spool left"></div>
+                <div class="cassette-tape"></div>
+                <div class="cassette-spool right"></div>
+              </div>
+            </div>
+            <div class="cassette-footer">
+              <div class="cassette-coords">12.9716° N, 77.5946° E</div>
+              <div class="cassette-scan-cta">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path></svg>
+                <span>SCAN QR STAMP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Handwritten Note with Smiley (matching reference) -->
+          <div class="hunt-play-note">
+            <span>PRESS PLAY ON YOUR QUEST</span>
+            <span class="note-smiley">☺</span>
+          </div>
+
+          <!-- Glossy SVG Stars -->
+          <div class="hunt-star hunt-star-1" aria-hidden="true">
+            <svg viewBox="0 0 36 36" width="34" height="34">
+              <defs>
+                <linearGradient id="huntStarGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="100%" stop-color="#94a3b8"/>
+                </linearGradient>
+              </defs>
+              <polygon points="18,0 23,13 36,18 23,23 18,36 13,23 0,18 13,13" fill="url(#huntStarGrad1)" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.25))"/>
+            </svg>
+          </div>
+          <div class="hunt-star hunt-star-2" aria-hidden="true">
+            <svg viewBox="0 0 36 36" width="26" height="26">
+              <defs>
+                <linearGradient id="huntStarGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffe066"/>
+                  <stop offset="100%" stop-color="#f59e0b"/>
+                </linearGradient>
+              </defs>
+              <polygon points="18,0 23,13 36,18 23,23 18,36 13,23 0,18 13,13" fill="url(#huntStarGrad2)" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.25))"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. COMMUNITY & TESTIMONIALS
+         ========================================================================= -->
+    <section class="section-testimonials">
+      <div style="text-align: center; max-width: 580px; margin: 0 auto 32px;">
+        <span class="section-eyebrow">FELLOW BIBLIOPHILES</span>
+        <h2 class="section-title">More Than a Marketplace.<br/>A Community of Readers.</h2>
+        <p class="section-desc">Reflections from readers who share our devotion to circular literature.</p>
+      </div>
+
+      <div class="community-testimonials-grid">
+        
+        <!-- 1. The Black Rounded Card with Avatar Stack (Matching Reference) -->
+        <div class="community-black-card">
+          <div class="comm-black-header">
+            <span class="comm-star-icon">✦</span>
+            <span class="comm-sub-pill">GLOBAL COMMUNITY</span>
+          </div>
+          <h3 class="comm-black-title">JOIN A GLOBAL CREATIVE COMMUNITY</h3>
+          
+          <div class="comm-avatar-stack">
+            <span class="comm-avatar av-pink">👩</span>
+            <span class="comm-avatar av-lime">👨</span>
+            <span class="comm-avatar av-lavender">🧑</span>
+            <span class="comm-avatar av-blue">👧</span>
+          </div>
+          
+          <p class="comm-black-desc">
+            Share your finished books, get honest recommendations, and be part of something bigger.
+          </p>
+
+          <button class="btn-comm-lime-pill" id="btn-community-join" type="button">
+            <span>Join Now</span>
+            <span class="cta-arrow">→</span>
+          </button>
+
+          <!-- Handwritten green chalk doodle on side -->
+          <div class="comm-chalk-note" aria-hidden="true">
+            <span class="chalk-crown">👑</span>
+            <span class="chalk-text">READ MORE<br/>SPEND LESS</span>
+          </div>
+        </div>
+
+        <!-- 2. Glass Quote Card 1 with Sticker Note -->
+        <div class="testimonial-card glass-card">
+          <div class="sticker-note sticker-green testimonial-sticker">
+            <span>✦ 5-STAR REVIEW</span>
+          </div>
+          <div>
+            <div class="stars-row">
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="testimonial-quote">
+              &ldquo;Rented three textbooks for the semester and saved a lot. Condition was exactly as described.&rdquo;
+            </p>
+          </div>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar av-pink">AM</div>
+            <div>
+              <p class="reviewer-name">Aarav M.</p>
+              <p class="reviewer-meta">Reader &bull; Mumbai</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Glass Quote Card 2 with Sticker Note -->
+        <div class="testimonial-card glass-card">
+          <div class="sticker-note sticker-orange testimonial-sticker">
+            <span>✦ ZERO COMMISSION</span>
+          </div>
+          <div>
+            <div class="stars-row">
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg class="star-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p class="testimonial-quote">
+              &ldquo;Sold my old engineering prep books in two days. Handed them over easily and got paid directly.&rdquo;
+            </p>
+          </div>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar av-lime">SV</div>
+            <div>
+              <p class="reviewer-name">Sunita V.</p>
+              <p class="reviewer-meta">Verified seller &bull; New Delhi</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Glossy Y2K Bento Design)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-inner glass-card">
+      
+      <!-- Big Bubble-Letter Wordmark Row (Matching Reference) -->
+      <div class="footer-bubble-hero">
+        <h2 class="footer-bubble-title">
+          <span class="bubble-word word-pink">BOOK</span><span class="bubble-word word-lime">LOOP</span><span class="footer-bubble-sparkle">✦</span>
+        </h2>
+        <p class="footer-bubble-sub">Read More, Spend Less, Share Stories.</p>
+      </div>
+
+      <div class="footer-top-grid">
+        
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <div class="sticker-note sticker-orange footer-sticker">
+            <span>✦ 100% CIRCULAR</span>
+          </div>
+          <p style="font-size: 14px; font-weight: 700; color: var(--near-black); margin-bottom: 8px;">BookLoop India</p>
+          <p style="font-size: 13px; color: #475569; max-width: 320px; line-height: 1.6;">Buy, rent and resell second-hand books. Read more, spend less, share stories.</p>
+          <div class="footer-doodle-note">giving pre-loved books a fresh home 🌿</div>
+        </div>
+
+        <!-- Explore Links -->
+        <div>
+          <h4 class="footer-col-title inflated-title-sm">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="#featured-books-grid" id="footer-curated-link">New Arrivals</a></li>
+            <li><a href="#antiquarian" data-info="antiquarian">Rare Books</a></li>
+            <li><a href="#treasure-hunt" id="footer-hunt-link">Treasure Hunt</a></li>
+            <li><a href="#shelf-container" id="footer-rental-link">Textbook Rentals</a></li>
+          </ul>
+        </div>
+
+        <!-- Community Links -->
+        <div>
+          <h4 class="footer-col-title inflated-title-sm">Community</h4>
+          <ul class="footer-links-list">
+            <li><a href="#sell" id="footer-sell-link">Sell a Book</a></li>
+            <li><a href="#salon" data-info="salon">Reading Clubs</a></li>
+            <li><a href="#exchange" data-info="exchange">Book Exchange</a></li>
+            <li><a href="#spotlights" data-info="spotlights">Bestsellers</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div>
+          <h4 class="footer-col-title inflated-title-sm">Newsletter</h4>
+          <p style="font-size: 13px; color: #475569; line-height: 1.5; margin-bottom: 12px;">Get new arrivals and rental deals in your inbox.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input class="newsletter-input" id="newsletter-email" placeholder="Your email address" type="email" required autocomplete="email" />
+            <button class="btn-newsletter btn-pill-glossy" id="newsletter-submit-btn" type="submit">
+              <span>Subscribe</span>
+            </button>
+          </form>
+          <div class="newsletter-thankyou" id="newsletter-thankyou" style="display: none; padding: 12px; border-radius: 12px; background: rgba(204, 255, 0, 0.2); border: 1px solid rgba(204, 255, 0, 0.5); margin-top: 10px; font-size: 13px; font-weight: 700; color: #0a0a0c; align-items: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Thank you for subscribing! We'll send rental deals and updates to your inbox.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal / Copyright Footer with Social Icons -->
+      <div class="footer-bottom-row">
+        <p>&copy; 2026 BookLoop. Read More, Spend Less, Share Stories.</p>
+        <div class="footer-legal-links">
+          <a href="#privacy" data-info="privacy">Privacy Policy</a>
+          <a href="#terms" data-info="terms">Terms of Rental &amp; Sale</a>
+          <a href="#standards" data-info="standards">Condition Standards</a>
+        </div>
+        <div class="footer-social-icons">
+          <span class="social-icon" title="Instagram">📷</span>
+          <span class="social-icon" title="TikTok">🎵</span>
+          <span class="social-icon" title="YouTube">▶</span>
+          <span class="social-icon" title="X">𝕏</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       HERO MOTION SYSTEM ELEMENTS:
+       1. Big Custom Ring Cursor (View disc over cover)
+       2. Full-Screen Detail Paper Sheet Modal
+       ========================================================================= -->
+  
+  <!-- Custom Ring Cursor -->
+  <div id="custom-cursor" class="custom-cursor">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-label">VIEW</div>
+  </div>
+
+  <!-- Full-Screen Book Detail Paper Sheet Modal -->
+  <div id="book-detail-sheet" class="book-detail-sheet" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="sheet-inner">
+      <!-- Sheet Brand Header -->
+      <div class="sheet-header-brand">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <!-- Close Button -->
+          <button class="sheet-close-btn" id="sheet-close-btn" type="button" aria-label="Close book detail">
+            <span>CLOSE</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+          <span class="sheet-tagline">BOOKLOOP INDIA</span>
+        </div>
+        <div class="sheet-brand-logo">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          <span>BOOKLOOP</span>
+        </div>
+        <span class="sheet-accession-id" id="sheet-accession-id">VOL. 07 · 2026</span>
+      </div>
+
+      <!-- Sheet Content Grid: Left Column Text & CTAs, Right Column Cover Artwork -->
+      <div class="sheet-content-grid">
+        <!-- Left Column: Masked Rising Text -->
+        <div class="sheet-left-col">
+          <div class="sheet-mask-wrap">
+            <span class="sheet-meta-pill" id="sheet-genre-pill">FICTION / FANTASY</span>
+          </div>
+
+          <div class="sheet-mask-wrap">
+            <h2 class="sheet-book-title" id="sheet-book-title">The Midnight Library</h2>
+          </div>
+
+          <div class="sheet-mask-wrap">
+            <div class="sheet-author-row" id="sheet-author-row">
+              <span class="sheet-author-name" id="sheet-author-name">By Matt Haig</span>
+              <span class="sheet-dot-sep">·</span>
+              <span class="sheet-condition-tag" id="sheet-condition-tag">LIKE NEW CONDITION</span>
+            </div>
+          </div>
+
+          <div class="sheet-mask-wrap">
+            <div class="sheet-specs-row" id="sheet-specs-row">
+              <div class="sheet-spec-item">
+                <span class="spec-label">EDITION</span>
+                <span class="spec-val" id="sheet-spec-edition">Clothbound Hardcover</span>
+              </div>
+              <div class="sheet-spec-item">
+                <span class="spec-label">PAGES</span>
+                <span class="spec-val" id="sheet-spec-pages">304 pages</span>
+              </div>
+              <div class="sheet-spec-item">
+                <span class="spec-label">RATING</span>
+                <span class="spec-val" id="sheet-spec-rating">4.8 / 5.0 (14.2k)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sheet-mask-wrap">
+            <p class="sheet-synopsis" id="sheet-synopsis">
+              Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices... Would you have done anything different, if you had the chance to undo your regrets?
+            </p>
+          </div>
+
+          <div class="sheet-mask-wrap">
+            <blockquote class="sheet-quote" id="sheet-quote">
+              "A celebration of books' power to change our lives, dazzling with endless possibilities."
+            </blockquote>
+          </div>
+
+          <div class="sheet-mask-wrap">
+            <div class="sheet-actions-row">
+              <button class="sheet-btn-buy" id="sheet-buy-btn" type="button">
+                <span>BUY NOW</span>
+                <span class="sheet-btn-price" id="sheet-buy-price">₹299</span>
+              </button>
+              <button class="sheet-btn-rent" id="sheet-rent-btn" type="button">
+                <span>RENT VOLUME</span>
+                <span class="sheet-btn-price" id="sheet-rent-price">₹40 / week</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="sheet-mask-wrap">
+            <div class="sheet-guarantee">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>100% Quality Guaranteed · Verified Spine Integrity · Free Carbon-Neutral Return</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Featured Cover Artwork with 3D Depth & Foil Texture -->
+        <div class="sheet-right-col">
+          <div class="sheet-cover-stage">
+            <div class="sheet-book-card" id="sheet-cover-card">
+              <!-- Replaced dynamically with active book cover styling -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       DRAWERS (WISHLIST & CART) & CHECKOUT MODAL
+       ========================================================================= -->
+
+  <!-- Wishlist Slide-in Drawer -->
+  <div class="drawer-backdrop" id="wishlist-backdrop"></div>
+  <aside class="slide-drawer" id="wishlist-drawer" aria-label="Wishlist Drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-header-title">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <h3>Your Wishlist</h3>
+        <span class="drawer-count-chip" id="wishlist-drawer-count">0 saved</span>
+      </div>
+      <button class="drawer-close-btn" id="wishlist-close-btn" type="button" aria-label="Close wishlist">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <div class="drawer-body" id="wishlist-items-container">
+      <!-- Populated dynamically by script.js -->
+    </div>
+
+    <div class="drawer-footer" id="wishlist-footer" style="display: none;">
+      <button class="drawer-action-btn secondary" id="wishlist-clear-btn" type="button">Clear Wishlist</button>
+    </div>
+  </aside>
+
+  <!-- Shopping Cart Slide-in Drawer -->
+  <div class="drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="slide-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-header-title">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <h3>Your Bag</h3>
+        <span class="drawer-count-chip" id="cart-drawer-count">0 items</span>
+      </div>
+      <button class="drawer-close-btn" id="cart-close-btn" type="button" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="cart-items-container">
+      <!-- Populated dynamically by script.js -->
+    </div>
+
+    <div class="drawer-footer cart-footer" id="cart-footer">
+      <div class="cart-summary-breakdown">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal-val">₹0</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Delivery &amp; Returns</span>
+          <span class="free-text">FREE</span>
+        </div>
+        <div class="cart-summary-divider"></div>
+        <div class="cart-summary-row total-row">
+          <span>Total</span>
+          <span class="cart-total-val" id="cart-total-val">₹0</span>
+        </div>
+      </div>
+      <button class="drawer-action-btn primary checkout-btn" id="cart-checkout-btn" type="button">
+        <span>Proceed to Checkout</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="checkout-modal-backdrop" id="checkout-backdrop">
+    <div class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title">
+      
+      <!-- View 1: Checkout Form -->
+      <div class="checkout-view" id="checkout-form-view">
+        <div class="checkout-header">
+          <div>
+            <span class="checkout-pill">SECURE CHECKOUT</span>
+            <h3 class="checkout-title" id="checkout-modal-title">Complete Your Order</h3>
+          </div>
+          <button class="drawer-close-btn" id="checkout-close-btn" type="button" aria-label="Close checkout">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <div class="checkout-order-banner" id="checkout-order-banner">
+          <span id="checkout-summary-count">0 items</span>
+          <span class="banner-total" id="checkout-summary-total">Total: ₹0</span>
+        </div>
+
+        <form class="checkout-form" id="checkout-form">
+          <div class="form-group">
+            <label for="checkout-name">Full Name</label>
+            <input type="text" id="checkout-name" name="name" placeholder="e.g. Maya Sharma" required autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="checkout-phone">Phone Number</label>
+            <input type="tel" id="checkout-phone" name="phone" placeholder="e.g. 9876543210" required pattern="[0-9]{10}" autocomplete="tel" title="Please enter a valid 10-digit mobile number" />
+          </div>
+
+          <div class="form-group">
+            <label for="checkout-address">Delivery Address</label>
+            <textarea id="checkout-address" name="address" rows="3" placeholder="Flat/House No., Street, City, PIN code" required autocomplete="street-address"></textarea>
+          </div>
+
+          <div class="checkout-guarantee-note">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--forest-green)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>No payment needed · Free carbon-neutral shipping on all orders</span>
+          </div>
+
+          <button class="btn-place-order" id="btn-place-order" type="submit">
+            <span>Place Order</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- View 2: Order Placed Confirmation -->
+      <div class="checkout-view" id="checkout-success-view" style="display: none;">
+        <div class="success-icon-wrap">
+          <div class="success-check-circle">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#244C3B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+        </div>
+        <span class="checkout-pill success">CONFIRMED</span>
+        <h3 class="success-title">Order Placed!</h3>
+        <p class="success-subtitle" id="success-user-msg">Thank you! Your books are being packed and will ship soon.</p>
+
+        <div class="success-details-card" id="success-details-card">
+          <!-- Filled dynamically with order number, items list, total -->
+        </div>
+
+        <button class="btn-success-close" id="btn-success-close" type="button">Continue Exploring</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       NEW MODALS: SELL A BOOK, TREASURE HUNT, AUTH, ORDERS, EDITORIAL INFO
+       ========================================================================= -->
+
+  <!-- 1. Sell a Book Modal -->
+  <div class="modal-backdrop" id="sell-modal-backdrop">
+    <div class="modal-card" id="sell-modal" role="dialog" aria-modal="true" aria-labelledby="sell-modal-title">
+      <div class="modal-header">
+        <div>
+          <span class="modal-pill">LIST A BOOK</span>
+          <h3 class="modal-title" id="sell-modal-title">Sell Your Book</h3>
+        </div>
+        <button class="drawer-close-btn" id="sell-close-btn" type="button" aria-label="Close sell form">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- View 1: Form -->
+      <form class="modal-form" id="sell-book-form">
+        <p class="modal-subtitle">List your book for sale or rent. Free listing, zero seller fees.</p>
+
+        <div class="form-group">
+          <label for="sell-title">Book Title</label>
+          <input type="text" id="sell-title" placeholder="e.g. The Picture of Dorian Gray" required autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+          <label for="sell-author">Author</label>
+          <input type="text" id="sell-author" placeholder="e.g. Oscar Wilde" required autocomplete="off" />
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="sell-genre">Genre</label>
+            <select id="sell-genre" required>
+              <option value="Fiction">Fiction</option>
+              <option value="Non-Fiction">Non-Fiction</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Self-Help">Self-Help</option>
+              <option value="Philosophy">Philosophy</option>
+              <option value="Classic">Classic</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sell-condition">Condition</label>
+            <select id="sell-condition" required>
+              <option value="LIKE NEW">Like New</option>
+              <option value="VERY GOOD">Very Good</option>
+              <option value="GOOD">Good</option>
+              <option value="VINTAGE">Vintage / Collectible</option>
+              <option value="ACCEPTABLE">Acceptable</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="sell-buy-price">Buy Price (₹)</label>
+            <input type="number" id="sell-buy-price" placeholder="e.g. 280" required min="10" />
+          </div>
+
+          <div class="form-group">
+            <label for="sell-rent-price">Weekly Rent (₹)</label>
+            <input type="number" id="sell-rent-price" placeholder="e.g. 35" required min="5" />
+          </div>
+        </div>
+
+        <!-- Photo Upload Preview -->
+        <div class="form-group">
+          <label>Cover Photo (Upload Preview)</label>
+          <div class="photo-upload-box" id="photo-upload-box">
+            <input type="file" id="sell-photo-input" accept="image/*" class="photo-file-input" />
+            <div class="photo-upload-placeholder" id="photo-upload-placeholder">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--forest-green)" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span>Click or browse cover photo</span>
+              <span class="upload-hint">PNG, JPG, or WEBP (instant preview)</span>
+            </div>
+            <div class="photo-preview-wrap" id="photo-preview-wrap" style="display: none;">
+              <img id="sell-preview-img" alt="Cover preview" class="photo-preview-img" />
+              <button type="button" class="btn-change-photo" id="btn-change-photo">Change Photo</button>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-modal-submit" id="btn-submit-listing">
+          <span>List Book</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </form>
+
+      <!-- View 2: Success Confirmation -->
+      <div class="modal-success-view" id="sell-success-view" style="display: none;">
+        <div class="success-icon-wrap">
+          <div class="success-check-circle">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#244C3B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+        </div>
+        <span class="checkout-pill success">LISTING LIVE</span>
+        <h3 class="success-title">Book Listed Successfully!</h3>
+        <p class="success-subtitle" id="sell-success-msg">Your book has been added to BookLoop with a "Your listing" tag.</p>
+        <button class="btn-success-close" id="btn-sell-done" type="button">View in Catalog</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Treasure Hunt Quest Modal -->
+  <div class="modal-backdrop" id="treasure-modal-backdrop">
+    <div class="modal-card modal-wide" id="treasure-hunt-modal" role="dialog" aria-modal="true" aria-labelledby="treasure-modal-title">
+      <div class="modal-header">
+        <div>
+          <span class="modal-pill gold">CAMPUS QUEST</span>
+          <h3 class="modal-title" id="treasure-modal-title">Book Treasure Hunt</h3>
+        </div>
+        <button class="drawer-close-btn" id="treasure-close-btn" type="button" aria-label="Close quest">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Live Karma Points Banner -->
+      <div class="karma-banner">
+        <div class="karma-info">
+          <span class="karma-sparkle">✨</span>
+          <div>
+            <span class="karma-label">YOUR KARMA POINTS</span>
+            <div class="karma-score"><span id="karma-points-val">500</span> <small>Points</small></div>
+          </div>
+        </div>
+        <div class="karma-rank">Rank: <strong id="karma-rank-title">Reader</strong></div>
+      </div>
+
+      <!-- Current Clue Expedition Ticket -->
+      <div class="quest-clue-card">
+        <div class="clue-tag-row">
+          <span class="clue-badge" id="clue-badge-status">CURRENT ACTIVE CLUE</span>
+          <span class="clue-coords" id="clue-coords-text">12.9716° N, 77.5946° E</span>
+        </div>
+        <h4 class="clue-riddle-title" id="clue-title-text">Clue #01: The Old Clock &amp; The Filter Coffee</h4>
+        <p class="clue-riddle-text" id="clue-riddle-text">
+          &ldquo;Where cold filter coffee meets yellowed leaves, find shelf 4B behind the vintage clock tower.&rdquo;
+        </p>
+        <span class="clue-hint-pill">Demo Clue Codes: <strong>LOOP01</strong>, <strong>LOOP02</strong>, <strong>LOOP03</strong></span>
+      </div>
+
+      <!-- Code Entry & Scan QR Row -->
+      <div class="hunt-actions-block">
+        <form class="clue-code-form" id="clue-code-form">
+          <div class="clue-input-wrap">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-1-1l-3 3m-1-1l-2 2m-1-1l-2 2M3 21l9-9"></path></svg>
+            <input type="text" id="clue-code-input" placeholder="Enter clue code (e.g. LOOP01)" required autocomplete="off" />
+          </div>
+          <button type="submit" class="btn-clue-submit" id="btn-submit-clue">Verify Code</button>
+        </form>
+
+        <div class="hunt-or-divider"><span>OR</span></div>
+
+        <button type="button" class="btn-scan-qr" id="btn-scan-qr">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7 7h3v3H7z"></path><path d="M14 7h3v3h-3z"></path><path d="M7 14h3v3H7z"></path><path d="M14 14h3v3h-3z"></path></svg>
+          <span id="scan-btn-label">Scan Book QR (Simulate Scan)</span>
+        </button>
+      </div>
+
+      <div class="hunt-feedback-msg" id="hunt-feedback-msg" style="display: none;"></div>
+
+      <!-- Unlocked Clues & Rewards Split -->
+      <div class="hunt-grid-2">
+        <div class="hunt-col">
+          <h4 class="hunt-subheading">Unlocked Clues</h4>
+          <div class="hunt-list" id="unlocked-clues-list">
+            <!-- Dynamically injected -->
+          </div>
+        </div>
+        <div class="hunt-col">
+          <h4 class="hunt-subheading">Karma Rewards</h4>
+          <div class="hunt-list" id="unlocked-rewards-list">
+            <!-- Dynamically injected -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Auth Modal (Log In & Sign Up) -->
+  <div class="modal-backdrop" id="auth-modal-backdrop">
+    <div class="modal-card" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+      <div class="modal-header">
+        <div>
+          <span class="modal-pill">ACCOUNT</span>
+          <h3 class="modal-title" id="auth-modal-title">Welcome to BookLoop</h3>
+        </div>
+        <button class="drawer-close-btn" id="auth-close-btn" type="button" aria-label="Close auth">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Auth Switcher Tabs -->
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab-btn active" id="tab-login-btn">Log In</button>
+        <button type="button" class="auth-tab-btn" id="tab-signup-btn">Create Account</button>
+      </div>
+
+      <!-- Log In Form -->
+      <form class="modal-form" id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" placeholder="name@example.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="••••••••" required minlength="4" autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn-modal-submit" id="btn-login-submit">
+          <span>Log In</span>
+        </button>
+        <p class="auth-switch-prompt">Don't have an account? <a href="#" id="switch-to-signup">Sign up here</a></p>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form class="modal-form" id="signup-form" style="display: none;">
+        <div class="form-group">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" placeholder="e.g. Maya Sen" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email Address</label>
+          <input type="email" id="signup-email" placeholder="name@example.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Create a password (min. 4 chars)" required minlength="4" autocomplete="new-password" />
+        </div>
+        <button type="submit" class="btn-modal-submit" id="btn-signup-submit">
+          <span>Create Account</span>
+        </button>
+        <p class="auth-switch-prompt">Already a member? <a href="#" id="switch-to-login">Log in here</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. My Orders Modal -->
+  <div class="modal-backdrop" id="orders-modal-backdrop">
+    <div class="modal-card modal-wide" id="orders-modal" role="dialog" aria-modal="true" aria-labelledby="orders-modal-title">
+      <div class="modal-header">
+        <div>
+          <span class="modal-pill">ORDER HISTORY</span>
+          <h3 class="modal-title" id="orders-modal-title">My Orders &amp; Rentals</h3>
+        </div>
+        <button class="drawer-close-btn" id="orders-close-btn" type="button" aria-label="Close orders">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="orders-body" id="orders-list-container">
+        <!-- Dynamically injected from localStorage -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Editorial Info Modal (No Dead Links) -->
+  <div class="modal-backdrop" id="info-modal-backdrop">
+    <div class="modal-card" id="info-modal" role="dialog" aria-modal="true" aria-labelledby="info-modal-title">
+      <div class="modal-header">
+        <div>
+          <span class="modal-pill" id="info-modal-pill">INFORMATION</span>
+          <h3 class="modal-title" id="info-modal-title">Information</h3>
+        </div>
+        <button class="drawer-close-btn" id="info-close-btn" type="button" aria-label="Close information">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="info-modal-content" id="info-modal-content">
+        <!-- Dynamically injected -->
+      </div>
+
+      <div style="margin-top: 24px; text-align: right;">
+        <button type="button" class="btn-success-close" id="btn-info-dismiss" style="width: auto; padding: 10px 24px;">Got It</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Delete Listing Confirmation Modal -->
+  <div class="modal-backdrop" id="delete-modal-backdrop">
+    <div class="modal-card modal-compact" id="delete-modal" role="dialog" aria-modal="true" aria-labelledby="delete-modal-title">
+      <div class="modal-header">
+        <div>
+          <span class="modal-pill red">CONFIRM DELETE</span>
+          <h3 class="modal-title" id="delete-modal-title">Delete this listing?</h3>
+        </div>
+        <button class="drawer-close-btn" id="delete-modal-close-btn" type="button" aria-label="Cancel delete">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <p class="delete-modal-text" id="delete-modal-desc">
+        Are you sure you want to remove this listing from the BookLoop catalog? This cannot be undone.
+      </p>
+      <div class="delete-modal-actions">
+        <button type="button" class="btn-delete-cancel" id="btn-delete-cancel">Cancel</button>
+        <button type="button" class="btn-delete-confirm" id="btn-delete-confirm">Delete</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed-dim":"#ffb876","secondary-container":"#fdb471","inverse-primary":"#abcebc","inverse-on-surface":"#f3f1eb","on-tertiary-fixed-variant":"#264e3d","secondary-fixed":"#ffdcc0","inverse-surface":"#30312d","tertiary-container":"#103a2a","tertiary-fixed":"#c0ecd5","on-secondary-container":"#784408","surface-container":"#f0eee8","on-secondary-fixed":"#2d1600","tertiary-fixed-dim":"#a5d0ba","secondary":"#885117","on-primary":"#ffffff","tertiary":"#002317","on-secondary-fixed-variant":"#6b3b00","surface-tint":"#456556","on-surface-variant":"#414844","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","primary-fixed":"#c7ebd8","error-container":"#ffdad6","on-tertiary-container":"#7aa48f","on-primary-fixed-variant":"#2d4d3f","surface-container-high":"#eae8e2","on-error":"#ffffff","surface":"#fbf9f3","surface-container-highest":"#e4e2dd","primary":"#022318","outline":"#727974","outline-variant":"#c1c8c2","on-error-container":"#93000a","primary-container":"#19392c","on-background":"#1b1c18","on-tertiary-fixed":"#002115","surface-dim":"#dcdad4","error":"#ba1a1a","surface-bright":"#fbf9f3","surface-container-low":"#f5f3ed","surface-variant":"#e4e2dd","on-primary-fixed":"#002115","background":"#fbf9f3","on-surface":"#1b1c18","on-secondary":"#ffffff","on-primary-container":"#81a392","primary-fixed-dim":"#abcebc"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","space-xs":"0.25rem","margin":"3rem","margin-tablet":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem","gutter-mobile":"1rem","margin-mobile":"1.25rem"},fontFamily:{"headline-lg":["EB Garamond"],"body-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-lg":["EB Garamond"],"label-md":["Plus Jakarta Sans"],"headline-md":["EB Garamond"],"body-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"display-lg-mobile":["EB Garamond"],"headline-lg-mobile":["EB Garamond"],"headline-sm":["EB Garamond"]},fontSize:{"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.02em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"500"}],"body-sm":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.05em",fontWeight:"700"}],"display-lg-mobile":["38px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"0em",fontWeight:"500"}],"headline-sm":["22px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-[#F8F6F0]/95 backdrop-blur-md border-b border-[#E5E1D8]"><div class="h-20 max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="BOOKLOOP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAg6qVcWlRBtsAUlPS13wtqi_2AAncCnYhWZ3LiPYAGzAMoJgwCtQ2AK_3pC0vFF_MrUGspyWlmVT6LnEQsYEqQv5EfjvjJ7yf7N1PBZFqDj7vMtwOyOPkiZOnbLMikvel11Fu76-Q0AIn-1yyRb3jTvRrxH8alnPsasxtIRAmRqTMIT4EfY0YmBOoWL7y6KESoEp_QatpvEBqlWa-Vab8SilN2imdlSNnVymxRJB_u"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-serif">BOOKLOOP</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold border-b-2 border-primary pb-1"><a aria-current="page" class="transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary hover:after:w-full after:transition-all after:duration-300 text-primary font-semibold border-b-2 border-primary pb-1" data-path="home" href="#">Home</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary hover:after:w-full after:transition-all after:duration-300" data-path="explore-books" href="#">Explore Books</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary hover:after:w-full after:transition-all after:duration-300" data-path="sell-a-book" href="#">Sell a Book</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary hover:after:w-full after:transition-all after:duration-300" data-path="treasure-hunt" href="#">Treasure Hunt</a></nav><div class="flex items-center gap-space-sm md:gap-space-md"><button aria-label="Search" class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center rounded-lg hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Wishlist" class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center rounded-lg hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[22px]">favorite</span></button><button aria-label="Cart" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center rounded-lg hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-secondary text-on-secondary font-label-sm text-label-sm w-4 h-4 rounded-full flex items-center justify-center">2</span></button><div class="h-5 w-[1px] bg-[#E5E1D8] mx-space-xs hidden sm:block"></div><a class="hidden sm:inline-flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-2 transition-colors" data-path="login" href="#">Log In</a><a class="inline-flex items-center justify-center bg-[#244C3B] hover:bg-primary-container text-white font-label-lg text-label-lg px-space-md py-2 rounded-lg transition-colors shadow-sm" data-path="signup" href="#">Sign Up</a><div class="ml-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-[#E5E1D8]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYwGDkvAnTn1GUXxF0HGIvPNwr3S4JniG7oeYFPSU0alnBSpHo7CnWTRfSWY4AGSqask-Jp3k0gjhmGD7gc-at7SXZOMErD9E4Zr5JePXWfuPrEaV5h8E2EK2WaiG_p4HQSKRDccQxt7iktJQHyVhb5gtz6WzL95SJsrscuXdJtphIvmAeA9DROfPSOLNmw1ejbmv_KE7WG0qHpeyhkYMA-FA_tXmu31D1GEWDQpY"/></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Top Subtle Texture Glow -->
+<div class="relative w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin pt-space-md lg:pt-space-xl pb-space-lg">
+<div class="absolute -top-12 left-1/4 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-48 right-10 w-80 h-80 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- 1. HERO SECTION -->
+<div class="w-full flex flex-col items-center mb-space-xl"><!-- 1. TOP / ABOVE THE SHELF --><div class="flex flex-col items-center text-center max-w-3xl mx-auto pt-space-xs pb-space-lg px-4"><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#E5E1D8] bg-surface-container-low/70 text-on-surface-variant font-label-sm text-[11px] tracking-widest uppercase mb-4 shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-[#244C3B] animate-pulse"></span><span>YOUR NEXT CHAPTER STARTS HERE</span></div><h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-primary tracking-tight leading-[1.15] font-serif mb-6">Every Book Deserves <span class="italic text-[#244C3B] font-serif font-normal">Another Story.</span></h1><!-- Genre Filter Tabs Bar --><div class="inline-flex items-center rounded-lg border border-[#E5E1D8] bg-surface-container-lowest/80 p-0.5 overflow-x-auto max-w-full shadow-xs"><button class="px-4 py-1.5 rounded-md font-label-sm text-[11px] tracking-wider uppercase font-semibold bg-[#244C3B] text-white transition-colors" type="button">ALL</button><button class="px-4 py-1.5 rounded-md font-label-sm text-[11px] tracking-wider uppercase font-medium text-on-surface-variant hover:text-primary transition-colors border-l border-transparent hover:bg-surface-container-low" type="button">ROMANCE</button><button class="px-4 py-1.5 rounded-md font-label-sm text-[11px] tracking-wider uppercase font-medium text-on-surface-variant hover:text-primary transition-colors border-l border-[#E5E1D8] hover:bg-surface-container-low" type="button">MYSTERY</button><button class="px-4 py-1.5 rounded-md font-label-sm text-[11px] tracking-wider uppercase font-medium text-on-surface-variant hover:text-primary transition-colors border-l border-[#E5E1D8] hover:bg-surface-container-low" type="button">FANTASY</button><button class="px-4 py-1.5 rounded-md font-label-sm text-[11px] tracking-wider uppercase font-medium text-on-surface-variant hover:text-primary transition-colors border-l border-[#E5E1D8] hover:bg-surface-container-low" type="button">SCI-FI</button><button class="px-4 py-1.5 rounded-md font-label-sm text-[11px] tracking-wider uppercase font-medium text-on-surface-variant hover:text-primary transition-colors border-l border-[#E5E1D8] hover:bg-surface-container-low" type="button">EDUCATIONAL</button></div></div><!-- 2. THE SHELF --><div class="relative w-full max-w-[1260px] mx-auto pt-6 pb-2"><button aria-label="Previous books on shelf" class="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full border border-[#E5E1D8] bg-surface-container-lowest/90 hover:bg-surface-container text-primary items-center justify-center shadow-sm transition-all hover:scale-105" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><button aria-label="Next books on shelf" class="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full border border-[#E5E1D8] bg-surface-container-lowest/90 hover:bg-surface-container text-primary items-center justify-center shadow-sm transition-all hover:scale-105" type="button"><span class="material-symbols-outlined text-[20px]">arrow_forward</span></button><div class="relative w-full overflow-x-auto pb-4 pt-4 px-6 md:px-12 flex items-end justify-center gap-2 sm:gap-2.5"><!-- Spine 1 --><div class="shrink-0 w-8 sm:w-9 h-[290px] rounded-t-[3px] bg-[#1e1e1e] border-t-2 border-[#3a3a3a] border-x border-black/30 shadow-md flex flex-col justify-between py-3 px-1 text-white/90 relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-[#d5c5a3] font-mono text-center">§ 01</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-[#d5c5a3]" style="writing-mode: vertical-rl; transform: rotate(180deg);">Sapiens</span></div><div class="text-[8px] text-white/50 text-center font-serif truncate">Harari</div></div><!-- Spine 2 --><div class="shrink-0 w-8 sm:w-9 h-[275px] rounded-t-[3px] bg-[#b85d38] border-t-2 border-[#d97c55] border-x border-black/20 shadow-md flex flex-col justify-between py-3 px-1 text-white relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-[#ffdcc0] font-mono text-center">§ 02</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-[#ffdcc0]" style="writing-mode: vertical-rl; transform: rotate(180deg);">The Silent Patient</span></div><div class="text-[8px] text-[#ffdcc0]/70 text-center font-serif truncate">Alex M.</div></div><!-- Spine 3 --><div class="shrink-0 w-8 sm:w-9 h-[300px] rounded-t-[3px] bg-[#e9e2d5] border-t-2 border-[#dcdad4] border-x border-black/15 shadow-md flex flex-col justify-between py-3 px-1 text-primary relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-primary/60 font-mono text-center">§ 03</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-semibold tracking-wide whitespace-nowrap text-primary" style="writing-mode: vertical-rl; transform: rotate(180deg);">Atomic Habits</span></div><div class="text-[8px] text-on-surface-variant text-center font-serif truncate">Clear</div></div><!-- Spine 4 --><div class="shrink-0 w-8 sm:w-9 h-[285px] rounded-t-[3px] bg-[#2c3e50] border-t-2 border-[#455d7a] border-x border-black/30 shadow-md flex flex-col justify-between py-3 px-1 text-white relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-[#a5d0ba] font-mono text-center">§ 04</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-white/90" style="writing-mode: vertical-rl; transform: rotate(180deg);">Pachinko</span></div><div class="text-[8px] text-white/60 text-center font-serif truncate">M.J. Lee</div></div><!-- Spine 5 --><div class="shrink-0 w-8 sm:w-9 h-[305px] rounded-t-[3px] bg-[#c9933b] border-t-2 border-[#deb05c] border-x border-black/20 shadow-md flex flex-col justify-between py-3 px-1 text-primary relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-[#2d1600] font-mono text-center">§ 05</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-bold tracking-wide whitespace-nowrap text-[#2d1600]" style="writing-mode: vertical-rl; transform: rotate(180deg);">The Alchemist</span></div><div class="text-[8px] text-[#2d1600]/70 text-center font-serif truncate">Coelho</div></div><!-- Spine 6 --><div class="shrink-0 w-8 sm:w-9 h-[270px] rounded-t-[3px] bg-[#60725a] border-t-2 border-[#788d71] border-x border-black/20 shadow-md flex flex-col justify-between py-3 px-1 text-white relative cursor-pointer hover:-translate-y-1 transition-transform mr-1 sm:mr-3"><div class="text-[8px] tracking-widest text-primary-fixed font-mono text-center">§ 06</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-white/90" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ikigai</span></div><div class="text-[8px] text-white/60 text-center font-serif truncate">García</div></div><!-- FEATURED CENTER COVER: The Midnight Library --><div class="relative shrink-0 z-20 mx-1 sm:mx-3 transform -rotate-[4deg] -translate-y-3 transition-transform duration-300 hover:rotate-0 hover:-translate-y-5 cursor-pointer"><div class="w-[230px] sm:w-[250px] h-[340px] sm:h-[370px] rounded-r-xl rounded-l-sm bg-gradient-to-b from-[#1b3e30] via-[#153427] to-[#0c2219] p-6 text-white flex flex-col justify-between relative border-l-4 border-l-[#091a13] border border-white/10" style="box-shadow: -12px 18px 36px -6px rgba(4, 25, 17, 0.45), 0 4px 12px rgba(0, 0, 0, 0.2);"><div class="flex items-center justify-between border-b border-[#c9933b]/30 pb-2.5"><span class="text-[9px] uppercase tracking-widest text-[#e8c68a] font-serif font-bold">BookLoop Archive</span><span class="material-symbols-outlined text-[16px] text-[#e8c68a]">auto_stories</span></div><div class="my-auto text-center py-4"><div class="w-10 h-10 mx-auto rounded-full border border-[#c9933b]/40 flex items-center justify-center text-[#e8c68a] mb-3"><span class="material-symbols-outlined text-[20px]">nightlight</span></div><h2 class="font-serif text-2xl font-bold leading-tight tracking-wide text-[#fbf9f3]">The Midnight<br/>Library</h2><p class="text-xs text-[#c7ebd8] font-serif italic mt-2">Matt Haig</p></div><div class="flex items-center justify-between border-t border-[#c9933b]/30 pt-2.5"><div class="w-7 h-7 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 transition-colors"><span class="material-symbols-outlined text-[16px]">visibility</span></div><div class="text-right"><span class="block text-[9px] uppercase tracking-widest text-[#abcebc]">Clothbound Hardcover</span><span class="font-serif text-xs font-bold text-[#fdb471]">₹299</span></div></div></div></div><!-- Spine 7 --><div class="shrink-0 w-8 sm:w-9 h-[290px] rounded-t-[3px] bg-[#19392c] border-t-2 border-[#2b5946] border-x border-black/30 shadow-md flex flex-col justify-between py-3 px-1 text-white relative cursor-pointer hover:-translate-y-1 transition-transform ml-1 sm:ml-3"><div class="text-[8px] tracking-widest text-primary-fixed-dim font-mono text-center">§ 07</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-primary-fixed" style="writing-mode: vertical-rl; transform: rotate(180deg);">Harry Potter</span></div><div class="text-[8px] text-white/50 text-center font-serif truncate">Rowling</div></div><!-- Spine 8 --><div class="shrink-0 w-8 sm:w-9 h-[280px] rounded-t-[3px] bg-[#f5f0e6] border-t-2 border-[#e4ded0] border-x border-black/15 shadow-md flex flex-col justify-between py-3 px-1 text-primary relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-primary/60 font-mono text-center">§ 08</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-primary" style="writing-mode: vertical-rl; transform: rotate(180deg);">Normal People</span></div><div class="text-[8px] text-on-surface-variant text-center font-serif truncate">Rooney</div></div><!-- Spine 9 --><div class="shrink-0 w-8 sm:w-9 h-[305px] rounded-t-[3px] bg-[#b85d38] border-t-2 border-[#d97c55] border-x border-black/20 shadow-md flex flex-col justify-between py-3 px-1 text-white relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-[#ffdcc0] font-mono text-center">§ 09</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-[#ffdcc0]" style="writing-mode: vertical-rl; transform: rotate(180deg);">Crying in H Mart</span></div><div class="text-[8px] text-[#ffdcc0]/70 text-center font-serif truncate">Zauner</div></div><!-- Spine 10 --><div class="shrink-0 w-8 sm:w-9 h-[275px] rounded-t-[3px] bg-[#244c3b] border-t-2 border-[#386c55] border-x border-black/25 shadow-md flex flex-col justify-between py-3 px-1 text-white relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-primary-fixed-dim font-mono text-center">§ 10</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-white/90" style="writing-mode: vertical-rl; transform: rotate(180deg);">Klara and the Sun</span></div><div class="text-[8px] text-white/60 text-center font-serif truncate">Ishiguro</div></div><!-- Spine 11 --><div class="shrink-0 w-8 sm:w-9 h-[295px] rounded-t-[3px] bg-[#1e1e1e] border-t-2 border-[#3a3a3a] border-x border-black/30 shadow-md flex flex-col justify-between py-3 px-1 text-white relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-[#c9933b] font-mono text-center">§ 11</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-medium tracking-wide whitespace-nowrap text-[#e8c68a]" style="writing-mode: vertical-rl; transform: rotate(180deg);">A Little Life</span></div><div class="text-[8px] text-white/50 text-center font-serif truncate">Yanagihara</div></div><!-- Spine 12 --><div class="shrink-0 w-8 sm:w-9 h-[270px] rounded-t-[3px] bg-[#c9933b] border-t-2 border-[#deb05c] border-x border-black/20 shadow-md flex flex-col justify-between py-3 px-1 text-primary relative cursor-pointer hover:-translate-y-1 transition-transform"><div class="text-[8px] tracking-widest text-[#2d1600] font-mono text-center">§ 12</div><div class="flex-1 flex items-center justify-center"><span class="font-serif text-[11px] font-bold tracking-wide whitespace-nowrap text-[#2d1600]" style="writing-mode: vertical-rl; transform: rotate(180deg);">Dune</span></div><div class="text-[8px] text-[#2d1600]/70 text-center font-serif truncate">Herbert</div></div></div><!-- Architectural Shelf Baseline Plank --><div class="w-full h-3 rounded-sm bg-[#e4ded0] border-t border-[#d5cdbe] shadow-sm relative -mt-0.5"><div class="w-full h-1 bg-black/10 blur-[1px]"></div></div></div><!-- 3. BELOW THE SHELF (Centered Caption Stack) --><div class="flex flex-col items-center text-center mt-6 mb-2"><h3 class="font-serif text-2xl sm:text-3xl text-primary font-bold tracking-tight mb-1.5">The Midnight Library</h3><div class="inline-flex items-center gap-1.5 font-label-sm text-[11px] tracking-widest font-semibold uppercase text-[#244C3B] mb-2"><span class="w-1.5 h-1.5 rounded-full bg-[#244C3B]"></span><span>MATT HAIG · LIKE NEW</span></div><p class="font-serif text-sm sm:text-base text-primary mb-4"><span class="font-bold text-primary">BUY ₹299</span> <span class="text-on-surface-variant font-light mx-1">·</span> <span class="text-secondary font-medium">RENT ₹40/week</span></p><div class="flex items-center justify-center gap-3 mb-6"><button class="w-32 py-2.5 px-5 rounded-[8px] bg-[#244C3B] hover:bg-primary-container text-white font-label-md text-label-md font-semibold tracking-wider transition-colors shadow-xs" type="button">BUY</button><button class="w-32 py-2.5 px-5 rounded-[8px] border border-[#244C3B] hover:bg-surface-container-low text-[#244C3B] font-label-md text-label-md font-semibold tracking-wider transition-colors" type="button">RENT</button></div><!-- Minimal Subtitle Footer Strip --><div class="w-full max-w-4xl flex items-center justify-between text-[11px] tracking-wider text-outline px-4 pt-3 border-t border-[#E5E1D8]/60"><span>© 2026 BOOKLOOP</span><div class="flex items-center gap-4"><span>INSTAGRAM</span><span>/</span><span>X</span></div></div></div></div>
+<!-- 2. SEARCH & DISCOVERY BAR -->
+<div class="relative z-30 max-w-4xl mx-auto -mt-4 mb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl p-2.5 sm:p-3 shadow-md transition-shadow hover:shadow-lg flex flex-col md:flex-row items-center gap-2 sm:gap-3">
+<!-- Search input -->
+<div class="relative flex-1 w-full flex items-center pl-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mr-2">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none py-1" placeholder="Search books, authors or genres..." type="text"/>
+</div>
+<div class="h-6 w-px bg-surface-container-highest hidden md:block"></div>
+<!-- Facet Category Dropdown -->
+<div class="w-full md:w-auto flex items-center justify-between px-3 py-1.5 bg-surface-container-low rounded-lg shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-1.5">tune</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-3">
+<option>All Categories</option>
+<option>Fiction &amp; Literature</option>
+<option>Non-Fiction</option>
+<option>Self-Help &amp; Mindset</option>
+<option>Rare Editions</option>
+</select>
+</div>
+<!-- Buy / Rent Segmented Toggle -->
+<div class="w-full md:w-auto flex items-center bg-surface-container p-1 rounded-lg shrink-0 justify-center">
+<button class="buy-rent-toggle px-3.5 py-1.5 rounded-md font-label-md text-label-md transition-all duration-200 bg-primary-container text-on-primary shadow-xs" type="button">
+            Buy
+          </button>
+<button class="buy-rent-toggle px-3.5 py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-200" type="button">
+            Rent
+          </button>
+</div>
+<!-- Search Submit CTA -->
+<button class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-tertiary-container text-on-primary font-label-lg text-label-lg px-6 py-2.5 rounded-lg transition-colors shrink-0 shadow-sm" type="button">
+<span>Search</span>
+</button>
+</div>
+</div>
+<!-- 3. BROWSE BY GENRE -->
+<section class="mb-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Curated Classifications</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary font-serif">Find Your Next Favourite</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Explore thousands of cataloged stories across every genre.</p>
+</div>
+<div class="mt-2 sm:mt-0 flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">8 curated aisles</span>
+<div class="flex gap-1">
+<button aria-label="Previous genre" class="p-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors" id="genre-prev">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-label="Next genre" class="p-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors" id="genre-next">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Genres Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+<!-- Card 1: Romance -->
+<div class="group relative bg-[#e9e2d5] hover:bg-[#e4ded0] border border-[#E5E1D8] hover:border-[#244C3B] rounded-[8px] p-3.5 sm:p-4 flex items-center justify-between cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden min-h-[96px]">
+<div class="z-10 pr-2">
+<h3 class="font-serif text-[18px] sm:text-[20px] font-semibold text-[#24241F] group-hover:text-[#244C3B] transition-colors leading-tight">Romance</h3>
+<p class="font-['Inter'] text-[11px] text-[#77766F] mt-1 tracking-wide">3,420 titles</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<!-- Spine 1 (-6deg) -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#b85d38] border border-white/20 shadow-sm transform -rotate-12 -translate-x-3.5 translate-y-0.5 group-hover:-rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/30 block"></span>
+</div>
+<!-- Spine 2 (0deg) -->
+<div class="absolute w-5 h-14 rounded-sm bg-[#ffdcc0] border border-black/10 shadow-md z-10 flex items-center justify-center">
+<span class="w-1 h-8 border-l border-black/15 block"></span>
+</div>
+<!-- Spine 3 (6deg) -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#885117] border border-white/20 shadow-sm transform rotate-12 translate-x-3.5 -translate-y-0.5 group-hover:rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/30 block"></span>
+</div>
+</div>
+</div>
+<!-- Card 2: Mystery & Thriller -->
+<div class="group relative bg-[#e9e2d5] hover:bg-[#e4ded0] border border-[#E5E1D8] hover:border-[#244C3B] rounded-[8px] p-3.5 sm:p-4 flex items-center justify-between cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden min-h-[96px]">
+<div class="z-10 pr-2">
+<h3 class="font-serif text-[18px] sm:text-[20px] font-semibold text-[#24241F] group-hover:text-[#244C3B] transition-colors leading-tight">Mystery &amp; Thriller</h3>
+<p class="font-['Inter'] text-[11px] text-[#77766F] mt-1 tracking-wide">2,890 titles</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<!-- Spine 1 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#1e1e1e] border border-white/10 shadow-sm transform -rotate-12 -translate-x-3.5 translate-y-0.5 group-hover:-rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-[#c9933b]/40 block"></span>
+</div>
+<!-- Spine 2 -->
+<div class="absolute w-5 h-14 rounded-sm bg-[#2c3e50] border border-white/15 shadow-md z-10 flex items-center justify-center">
+<span class="w-1 h-8 border-l border-white/30 block"></span>
+</div>
+<!-- Spine 3 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#414844] border border-white/20 shadow-sm transform rotate-12 translate-x-3.5 -translate-y-0.5 group-hover:rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/30 block"></span>
+</div>
+</div>
+</div>
+<!-- Card 3: Fantasy -->
+<div class="group relative bg-[#e9e2d5] hover:bg-[#e4ded0] border border-[#E5E1D8] hover:border-[#244C3B] rounded-[8px] p-3.5 sm:p-4 flex items-center justify-between cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden min-h-[96px]">
+<div class="z-10 pr-2">
+<h3 class="font-serif text-[18px] sm:text-[20px] font-semibold text-[#24241F] group-hover:text-[#244C3B] transition-colors leading-tight">Fantasy</h3>
+<p class="font-['Inter'] text-[11px] text-[#77766F] mt-1 tracking-wide">4,120 titles</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<!-- Spine 1 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#19392c] border border-white/20 shadow-sm transform -rotate-12 -translate-x-3.5 translate-y-0.5 group-hover:-rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-[#c7ebd8]/40 block"></span>
+</div>
+<!-- Spine 2 -->
+<div class="absolute w-5 h-14 rounded-sm bg-[#deb05c] border border-black/15 shadow-md z-10 flex items-center justify-center">
+<span class="w-1 h-8 border-l border-black/20 block"></span>
+</div>
+<!-- Spine 3 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#103a2a] border border-white/20 shadow-sm transform rotate-12 translate-x-3.5 -translate-y-0.5 group-hover:rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/30 block"></span>
+</div>
+</div>
+</div>
+<!-- Card 4: Horror -->
+<div class="group relative bg-[#e9e2d5] hover:bg-[#e4ded0] border border-[#E5E1D8] hover:border-[#244C3B] rounded-[8px] p-3.5 sm:p-4 flex items-center justify-between cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden min-h-[96px]">
+<div class="z-10 pr-2">
+<h3 class="font-serif text-[18px] sm:text-[20px] font-semibold text-[#24241F] group-hover:text-[#244C3B] transition-colors leading-tight">Horror</h3>
+<p class="font-['Inter'] text-[11px] text-[#77766F] mt-1 tracking-wide">1,340 titles</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<!-- Spine 1 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#30312d] border border-white/10 shadow-sm transform -rotate-12 -translate-x-3.5 translate-y-0.5 group-hover:-rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/20 block"></span>
+</div>
+<!-- Spine 2 -->
+<div class="absolute w-5 h-14 rounded-sm bg-[#1e1e1e] border border-white/10 shadow-md z-10 flex items-center justify-center">
+<span class="w-1 h-8 border-l border-[#ba1a1a]/60 block"></span>
+</div>
+<!-- Spine 3 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#6b3b00] border border-white/15 shadow-sm transform rotate-12 translate-x-3.5 -translate-y-0.5 group-hover:rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/30 block"></span>
+</div>
+</div>
+</div>
+<!-- Card 5: Science Fiction -->
+<div class="group relative bg-[#e9e2d5] hover:bg-[#e4ded0] border border-[#E5E1D8] hover:border-[#244C3B] rounded-[8px] p-3.5 sm:p-4 flex items-center justify-between cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden min-h-[96px]">
+<div class="z-10 pr-2">
+<h3 class="font-serif text-[18px] sm:text-[20px] font-semibold text-[#24241F] group-hover:text-[#244C3B] transition-colors leading-tight">Science Fiction</h3>
+<p class="font-['Inter'] text-[11px] text-[#77766F] mt-1 tracking-wide">2,650 titles</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<!-- Spine 1 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#2c3e50] border border-white/20 shadow-sm transform -rotate-12 -translate-x-3.5 translate-y-0.5 group-hover:-rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-[#a5d0ba]/50 block"></span>
+</div>
+<!-- Spine 2 -->
+<div class="absolute w-5 h-14 rounded-sm bg-[#19392c] border border-white/20 shadow-md z-10 flex items-center justify-center">
+<span class="w-1 h-8 border-l border-white/40 block"></span>
+</div>
+<!-- Spine 3 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#455d7a] border border-white/20 shadow-sm transform rotate-12 translate-x-3.5 -translate-y-0.5 group-hover:rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/30 block"></span>
+</div>
+</div>
+</div>
+<!-- Card 6: Adventure -->
+<div class="group relative bg-[#e9e2d5] hover:bg-[#e4ded0] border border-[#E5E1D8] hover:border-[#244C3B] rounded-[8px] p-3.5 sm:p-4 flex items-center justify-between cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden min-h-[96px]">
+<div class="z-10 pr-2">
+<h3 class="font-serif text-[18px] sm:text-[20px] font-semibold text-[#24241F] group-hover:text-[#244C3B] transition-colors leading-tight">Adventure</h3>
+<p class="font-['Inter'] text-[11px] text-[#77766F] mt-1 tracking-wide">1,980 titles</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<!-- Spine 1 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#c9933b] border border-white/20 shadow-sm transform -rotate-12 -translate-x-3.5 translate-y-0.5 group-hover:-rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-[#2d1600]/30 block"></span>
+</div>
+<!-- Spine 2 -->
+<div class="absolute w-5 h-14 rounded-sm bg-[#60725a] border border-white/20 shadow-md z-10 flex items-center justify-center">
+<span class="w-1 h-8 border-l border-white/30 block"></span>
+</div>
+<!-- Spine 3 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#b85d38] border border-white/20 shadow-sm transform rotate-12 translate-x-3.5 -translate-y-0.5 group-hover:rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/30 block"></span>
+</div>
+</div>
+</div>
+<!-- Card 7: Fiction -->
+<div class="group relative bg-[#e9e2d5] hover:bg-[#e4ded0] border border-[#E5E1D8] hover:border-[#244C3B] rounded-[8px] p-3.5 sm:p-4 flex items-center justify-between cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden min-h-[96px]">
+<div class="z-10 pr-2">
+<h3 class="font-serif text-[18px] sm:text-[20px] font-semibold text-[#24241F] group-hover:text-[#244C3B] transition-colors leading-tight">Fiction</h3>
+<p class="font-['Inter'] text-[11px] text-[#77766F] mt-1 tracking-wide">5,630 titles</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<!-- Spine 1 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#deb05c] border border-black/15 shadow-sm transform -rotate-12 -translate-x-3.5 translate-y-0.5 group-hover:-rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-black/15 block"></span>
+</div>
+<!-- Spine 2 -->
+<div class="absolute w-5 h-14 rounded-sm bg-[#19392c] border border-white/20 shadow-md z-10 flex items-center justify-center">
+<span class="w-1 h-8 border-l border-white/30 block"></span>
+</div>
+<!-- Spine 3 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#ffdcc0] border border-black/10 shadow-sm transform rotate-12 translate-x-3.5 -translate-y-0.5 group-hover:rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-black/15 block"></span>
+</div>
+</div>
+</div>
+<!-- Card 8: Educational -->
+<div class="group relative bg-[#e9e2d5] hover:bg-[#e4ded0] border border-[#E5E1D8] hover:border-[#244C3B] rounded-[8px] p-3.5 sm:p-4 flex items-center justify-between cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 overflow-hidden min-h-[96px]">
+<div class="z-10 pr-2">
+<h3 class="font-serif text-[18px] sm:text-[20px] font-semibold text-[#24241F] group-hover:text-[#244C3B] transition-colors leading-tight">Educational</h3>
+<p class="font-['Inter'] text-[11px] text-[#77766F] mt-1 tracking-wide">3,110 titles</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<!-- Spine 1 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#244C3B] border border-white/20 shadow-sm transform -rotate-12 -translate-x-3.5 translate-y-0.5 group-hover:-rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-[#c7ebd8]/40 block"></span>
+</div>
+<!-- Spine 2 -->
+<div class="absolute w-5 h-14 rounded-sm bg-[#c9933b] border border-black/15 shadow-md z-10 flex items-center justify-center">
+<span class="w-1 h-8 border-l border-[#2d1600]/25 block"></span>
+</div>
+<!-- Spine 3 -->
+<div class="absolute w-5 h-13 rounded-sm bg-[#1e1e1e] border border-white/15 shadow-sm transform rotate-12 translate-x-3.5 -translate-y-0.5 group-hover:rotate-16 transition-transform duration-300 flex items-center justify-center">
+<span class="w-1 h-7 border-l border-white/30 block"></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. FEATURED BOOKS ("Stories Worth Sharing") -->
+<section class="mb-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">CIRCULAR SHELVES</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary font-serif">Stories Worth Sharing</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Handpicked books waiting patiently for their next reader.</p>
+</div>
+<a class="mt-2 sm:mt-0 inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary font-semibold group" data-path="explore-books" href="#">
+<span>View All 1,840 Active Listings</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- 6-Card Responsive Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md lg:gap-space-lg">
+<!-- CARD 1: The Midnight Library -->
+<div class="book-card group bg-[#FFFFFF] rounded-[8px] border border-[#E5E1D8] p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5">
+<div>
+<!-- Realistic Book Photography Cover (2:3 aspect ratio) -->
+<div class="relative w-full aspect-[2/3] rounded-[6px] overflow-hidden bg-surface-container shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+<img alt="The Midnight Library by Matt Haig cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAue1EM3Rn89zvDUhRKRdalKXB2ULiYAhvnAI3U8ilNvnMlmAfuWYHeWoIZq-R3SYq2j2mSKzG8yk5yT598GA_cFN4EOPUrWTvgtdFel7P36wQc0kub3KxYOmv_smBSyelwvQQFdYQPDAPTWiidho-IY8FcWN-kiWIus4jsNTc_KS-QHpPyskQaB7V98W_uU24r4M_Q1eMsZLyZ3CQlwpUoWEBVq8_wT2SDTD4KFrk"/>
+<!-- Wishlist icon button (top-right) -->
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-on-surface-variant hover:text-error flex items-center justify-center shadow-sm transition-colors z-10" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Meta details -->
+<div class="mt-3.5 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-['Inter'] text-[13px] text-[#77766F]">Matt Haig</p>
+<span class="px-2 py-0.5 rounded-[4px] border border-[#E5E1D8] font-['Inter'] font-semibold text-[10px] tracking-wider uppercase text-[#24241F]">LIKE NEW</span>
+</div>
+<h3 class="font-serif text-[18px] leading-snug text-[#24241F] font-semibold truncate">
+The Midnight Library
+</h3>
+<p class="font-['Inter'] text-[13px] font-semibold text-[#24241F] pt-0.5">
+₹299 / ₹40 per week
+</p>
+</div>
+</div>
+<!-- Action Row -->
+<div class="mt-4 pt-3 border-t border-[#E5E1D8]/60 grid grid-cols-2 gap-2">
+<button class="w-full py-2 px-3 rounded-[8px] bg-[#244C3B] hover:bg-primary-container text-white font-label-md text-label-md font-semibold transition-colors shadow-xs" type="button">
+BUY
+</button>
+<button class="w-full py-2 px-3 rounded-[8px] border border-[#244C3B] hover:bg-surface-container-low text-[#244C3B] font-label-md text-label-md font-semibold transition-colors" type="button">
+RENT
+</button>
+</div>
+</div>
+<!-- CARD 2: Atomic Habits -->
+<div class="book-card group bg-[#FFFFFF] rounded-[8px] border border-[#E5E1D8] p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5">
+<div>
+<!-- Realistic Book Photography Cover (2:3 aspect ratio) -->
+<div class="relative w-full aspect-[2/3] rounded-[6px] overflow-hidden bg-surface-container shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+<img alt="Atomic Habits by James Clear cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG3SR1r4ws67ne3qcGYkCGxL_6Q-j_T3sCnehO1yDhanN5hesDfzn9Rjjy27Nel0BIV8VW9GaBA4zQzUc7P23tV0N3WyAChkMLcgmS8PkI5VYUyznmGtfIbzpceBTw5aoqV6QPXspdiK8HNA-WMXX3jKjYQUPDEujE8GJKTD7djMTTvUxwdb25KaYrtEBoTa7znVG0aVVC0bejzgAaK27qFy1CPIqKXrslWmGupWM"/>
+<!-- Wishlist icon button (top-right) -->
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-on-surface-variant hover:text-error flex items-center justify-center shadow-sm transition-colors z-10" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Meta details -->
+<div class="mt-3.5 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-['Inter'] text-[13px] text-[#77766F]">James Clear</p>
+<span class="px-2 py-0.5 rounded-[4px] border border-[#E5E1D8] font-['Inter'] font-semibold text-[10px] tracking-wider uppercase text-[#24241F]">LIKE NEW</span>
+</div>
+<h3 class="font-serif text-[18px] leading-snug text-[#24241F] font-semibold truncate">
+Atomic Habits
+</h3>
+<p class="font-['Inter'] text-[13px] font-semibold text-[#24241F] pt-0.5">
+₹350 / ₹50 per week
+</p>
+</div>
+</div>
+<!-- Action Row -->
+<div class="mt-4 pt-3 border-t border-[#E5E1D8]/60 grid grid-cols-2 gap-2">
+<button class="w-full py-2 px-3 rounded-[8px] bg-[#244C3B] hover:bg-primary-container text-white font-label-md text-label-md font-semibold transition-colors shadow-xs" type="button">
+BUY
+</button>
+<button class="w-full py-2 px-3 rounded-[8px] border border-[#244C3B] hover:bg-surface-container-low text-[#244C3B] font-label-md text-label-md font-semibold transition-colors" type="button">
+RENT
+</button>
+</div>
+</div>
+<!-- CARD 3: The Silent Patient -->
+<div class="book-card group bg-[#FFFFFF] rounded-[8px] border border-[#E5E1D8] p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5">
+<div>
+<!-- Realistic Book Photography Cover (2:3 aspect ratio) -->
+<div class="relative w-full aspect-[2/3] rounded-[6px] overflow-hidden bg-surface-container shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+<img alt="The Silent Patient by Alex Michaelides cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg83Cyxv9I-A18h4cgMx2W4H309eirZyxRChVFr0VstyKTCCUmtHQVW0I_HH8Op7WxYftBjKErqDK9i28ObBs8n-c94-8jeSTHFJyuNj1qKucD8IviqHnt86ohu6KMDhSLLr38xz1Z61VG2_B7yGi4gA6TfNdgl8KRk0ns7meZP2MCzoGYxxPrHIR9t4uCDtqOtkAuFscVWqHbXAv9obOph7r1_2u6HslNzlbqXRA"/>
+<!-- Wishlist icon button (top-right) -->
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-on-surface-variant hover:text-error flex items-center justify-center shadow-sm transition-colors z-10" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Meta details -->
+<div class="mt-3.5 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-['Inter'] text-[13px] text-[#77766F]">Alex Michaelides</p>
+<span class="px-2 py-0.5 rounded-[4px] border border-[#E5E1D8] font-['Inter'] font-semibold text-[10px] tracking-wider uppercase text-[#24241F]">GOOD</span>
+</div>
+<h3 class="font-serif text-[18px] leading-snug text-[#24241F] font-semibold truncate">
+The Silent Patient
+</h3>
+<p class="font-['Inter'] text-[13px] font-semibold text-[#24241F] pt-0.5">
+₹250 / ₹35 per week
+</p>
+</div>
+</div>
+<!-- Action Row -->
+<div class="mt-4 pt-3 border-t border-[#E5E1D8]/60 grid grid-cols-2 gap-2">
+<button class="w-full py-2 px-3 rounded-[8px] bg-[#244C3B] hover:bg-primary-container text-white font-label-md text-label-md font-semibold transition-colors shadow-xs" type="button">
+BUY
+</button>
+<button class="w-full py-2 px-3 rounded-[8px] border border-[#244C3B] hover:bg-surface-container-low text-[#244C3B] font-label-md text-label-md font-semibold transition-colors" type="button">
+RENT
+</button>
+</div>
+</div>
+<!-- CARD 4: Ikigai -->
+<div class="book-card group bg-[#FFFFFF] rounded-[8px] border border-[#E5E1D8] p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5">
+<div>
+<!-- Realistic Book Photography Cover (2:3 aspect ratio) -->
+<div class="relative w-full aspect-[2/3] rounded-[6px] overflow-hidden bg-surface-container shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+<img alt="Ikigai by Hector Garcia cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb6l7N4OclsiRRYnP-DACeCmSO7WjU9pMV6kVQo0lZ9mJyC3gCO9gt8fJ6VUMY4aWAr5JDg778e9v2hJLY4-bxMmecSeqSrQUgz6H5rkWmOdAGe-bKvBY5GgmIM_FzSQHlfhUIimrVLf3fMlh3hckhuUhOolCRfEUddAHKCPiKTgVCIfDSTgpGNMoiTiNMASCnjJHe6DExF_GSvYkuN4MMLYLNunfzh__ClM1MaFY"/>
+<!-- Wishlist icon button (top-right) -->
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-on-surface-variant hover:text-error flex items-center justify-center shadow-sm transition-colors z-10" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Meta details -->
+<div class="mt-3.5 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-['Inter'] text-[13px] text-[#77766F]">Hector Garcia</p>
+<span class="px-2 py-0.5 rounded-[4px] border border-[#E5E1D8] font-['Inter'] font-semibold text-[10px] tracking-wider uppercase text-[#24241F]">LIKE NEW</span>
+</div>
+<h3 class="font-serif text-[18px] leading-snug text-[#24241F] font-semibold truncate">
+Ikigai
+</h3>
+<p class="font-['Inter'] text-[13px] font-semibold text-[#24241F] pt-0.5">
+₹220 / ₹30 per week
+</p>
+</div>
+</div>
+<!-- Action Row -->
+<div class="mt-4 pt-3 border-t border-[#E5E1D8]/60 grid grid-cols-2 gap-2">
+<button class="w-full py-2 px-3 rounded-[8px] bg-[#244C3B] hover:bg-primary-container text-white font-label-md text-label-md font-semibold transition-colors shadow-xs" type="button">
+BUY
+</button>
+<button class="w-full py-2 px-3 rounded-[8px] border border-[#244C3B] hover:bg-surface-container-low text-[#244C3B] font-label-md text-label-md font-semibold transition-colors" type="button">
+RENT
+</button>
+</div>
+</div>
+<!-- CARD 5: The Alchemist -->
+<div class="book-card group bg-[#FFFFFF] rounded-[8px] border border-[#E5E1D8] p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5">
+<div>
+<!-- Realistic Book Photography Cover (2:3 aspect ratio) -->
+<div class="relative w-full aspect-[2/3] rounded-[6px] overflow-hidden bg-surface-container shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+<img alt="The Alchemist by Paulo Coelho cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDpsplD5lbXR5iDnXDRC8pwHNzuwogpAbxi5UfmA9UVIXuJ9CjLMaDTf6-_kQHw2aMBVJNKvP_KYvAcbz2AnthiCr2X5cBvYvHENHeIsOgvQHPQ_14zt6FGWb9a4-q7_Dpduub-DAWRxf5BwdsOUQywdIQFhyDQeW2x-nUAOAKnf6D4ksYXxE8lr_lEqOzoSaSAHx3eSDIUuzoIq3SMO7jqcxF_u6eqUylQlZKORQ"/>
+<!-- Wishlist icon button (top-right) -->
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-on-surface-variant hover:text-error flex items-center justify-center shadow-sm transition-colors z-10" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Meta details -->
+<div class="mt-3.5 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-['Inter'] text-[13px] text-[#77766F]">Paulo Coelho</p>
+<span class="px-2 py-0.5 rounded-[4px] border border-[#E5E1D8] font-['Inter'] font-semibold text-[10px] tracking-wider uppercase text-[#24241F]">GOOD</span>
+</div>
+<h3 class="font-serif text-[18px] leading-snug text-[#24241F] font-semibold truncate">
+The Alchemist
+</h3>
+<p class="font-['Inter'] text-[13px] font-semibold text-[#24241F] pt-0.5">
+₹199 / ₹25 per week
+</p>
+</div>
+</div>
+<!-- Action Row -->
+<div class="mt-4 pt-3 border-t border-[#E5E1D8]/60 grid grid-cols-2 gap-2">
+<button class="w-full py-2 px-3 rounded-[8px] bg-[#244C3B] hover:bg-primary-container text-white font-label-md text-label-md font-semibold transition-colors shadow-xs" type="button">
+BUY
+</button>
+<button class="w-full py-2 px-3 rounded-[8px] border border-[#244C3B] hover:bg-surface-container-low text-[#244C3B] font-label-md text-label-md font-semibold transition-colors" type="button">
+RENT
+</button>
+</div>
+</div>
+<!-- CARD 6: Harry Potter -->
+<div class="book-card group bg-[#FFFFFF] rounded-[8px] border border-[#E5E1D8] p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5">
+<div>
+<!-- Realistic Book Photography Cover (2:3 aspect ratio) -->
+<div class="relative w-full aspect-[2/3] rounded-[6px] overflow-hidden bg-surface-container shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+<img alt="Harry Potter by J.K. Rowling cover" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHOMN_h8dnT0HThFta4_tuIiMPXgN84HP_mmkVYCTDgUpOPmb7YLZdVnSlRPma7_YiBCwUJQOJ3cScDXeEsZlfK6yr5fQkBYCWCWgBnSBDt3IlNHUql8Hr06NC6NKtCZpIDmfsxZZ-YBpiFquYsvulk-_GM4vge_BGmByjjUBn1Lz1HlEegS0s6yxSzCV4URLzzTy4UamDFrl270brfQdYkGI65IVh9iUyp8ZiqXA"/>
+<!-- Wishlist icon button (top-right) -->
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-on-surface-variant hover:text-error flex items-center justify-center shadow-sm transition-colors z-10" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Meta details -->
+<div class="mt-3.5 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-['Inter'] text-[13px] text-[#77766F]">J.K. Rowling</p>
+<span class="px-2 py-0.5 rounded-[4px] border border-[#E5E1D8] font-['Inter'] font-semibold text-[10px] tracking-wider uppercase text-[#24241F]">LIKE NEW</span>
+</div>
+<h3 class="font-serif text-[18px] leading-snug text-[#24241F] font-semibold truncate">
+Harry Potter
+</h3>
+<p class="font-['Inter'] text-[13px] font-semibold text-[#24241F] pt-0.5">
+₹399 / ₹60 per week
+</p>
+</div>
+</div>
+<!-- Action Row -->
+<div class="mt-4 pt-3 border-t border-[#E5E1D8]/60 grid grid-cols-2 gap-2">
+<button class="w-full py-2 px-3 rounded-[8px] bg-[#244C3B] hover:bg-primary-container text-white font-label-md text-label-md font-semibold transition-colors shadow-xs" type="button">
+BUY
+</button>
+<button class="w-full py-2 px-3 rounded-[8px] border border-[#244C3B] hover:bg-surface-container-low text-[#244C3B] font-label-md text-label-md font-semibold transition-colors" type="button">
+RENT
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. HOW BOOKLOOP WORKS (Clean Three-Step Horizontal Section) -->
+<section class="mb-space-xl py-space-lg px-space-md lg:px-space-xl bg-surface-container-low rounded-2xl">
+<div class="text-center max-w-xl mx-auto mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">CIRCULAR ELEGANCE</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary font-serif mt-1">How BookLoop Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Three deliberate steps to extend the voyage of every printed page.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Connecting subtle dashed line for desktop -->
+<div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 border-t border-dashed border-outline-variant -z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center p-4 bg-surface-container-lowest rounded-xl shadow-xs hover:shadow-md transition-shadow">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-headline-sm font-serif font-bold text-lg mb-3 shadow-xs">
+            01
+          </div>
+<h3 class="font-headline-sm text-lg font-serif font-semibold text-primary mb-1">Discover</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+            Find books you love across genres, verify real condition photographs, and inspect collector annotations.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center p-4 bg-surface-container-lowest rounded-xl shadow-xs hover:shadow-md transition-shadow">
+<div class="w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-headline-sm font-serif font-bold text-lg mb-3 shadow-xs">
+            02
+          </div>
+<h3 class="font-headline-sm text-lg font-serif font-semibold text-primary mb-1">Read Your Way</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+            Choose to rent for 30, 60 or 90 days at pocket-friendly rates, or purchase permanently for your own personal library.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center p-4 bg-surface-container-lowest rounded-xl shadow-xs hover:shadow-md transition-shadow">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary font-headline-sm font-serif font-bold text-lg mb-3 shadow-xs">
+            03
+          </div>
+<h3 class="font-headline-sm text-lg font-serif font-semibold text-primary mb-1">Share Again</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+            Return with doorstep pickup, or list your finished titles to earn BookLoop credits and pass stories onward.
+          </p>
+</div>
+</div>
+</section>
+<!-- 6. BOOK TREASURE HUNT (Visually Distinctive Promotional Panel) -->
+<section class="mb-space-xl relative overflow-hidden rounded-2xl bg-[#244C3B] text-white p-space-lg lg:p-space-xl shadow-xl border border-white/10"><!-- Antique Faint Cartography Line Drawing Overlay --><div class="absolute inset-0 w-full h-full opacity-15 pointer-events-none select-none overflow-hidden"><svg class="w-full h-full text-[#F8F6F0]" fill="none" preserveaspectratio="xMidYMid slice" stroke="currentColor" viewbox="0 0 1000 600"><!-- Topographic contours --><path d="M-50,120 C120,80 250,180 420,110 C580,40 760,130 920,80 C1020,50 1100,100 1150,80" stroke-width="1"></path><path d="M-40,180 C140,140 280,240 440,170 C600,100 780,190 940,140 C1040,110 1110,160 1160,140" stroke-dasharray="3 3" stroke-width="0.8"></path><path d="M-20,260 C160,220 300,320 480,240 C630,170 800,260 970,200 C1060,170 1120,230 1180,200" stroke-width="0.8"></path><path d="M-60,360 C130,300 270,410 450,330 C610,260 790,340 950,280 C1050,240 1120,310 1180,270" stroke-width="1"></path><path d="M-30,470 C150,420 310,500 490,430 C660,370 820,440 980,380 C1070,350 1130,410 1190,380" stroke-dasharray="4 4" stroke-width="0.8"></path><!-- Dashed Voyage Route --><path d="M110,480 C220,390 320,450 430,340 C520,250 630,280 720,190 C810,100 930,140 1020,70" stroke="#deb05c" stroke-dasharray="6 6" stroke-width="1.5"></path><circle cx="110" cy="480" fill="#deb05c" r="4"></circle><circle cx="430" cy="340" fill="#deb05c" r="3.5"></circle><circle cx="720" cy="190" fill="#deb05c" r="3.5"></circle><circle cx="1020" cy="70" fill="#deb05c" r="4"></circle><!-- Grid Lines & Lat/Long Coordinates --><line stroke-dasharray="2 4" stroke-width="0.6" x1="200" x2="200" y1="0" y2="600"></line><line stroke-dasharray="2 4" stroke-width="0.6" x1="500" x2="500" y1="0" y2="600"></line><line stroke-dasharray="2 4" stroke-width="0.6" x1="800" x2="800" y1="0" y2="600"></line><line stroke-dasharray="2 4" stroke-width="0.6" x1="0" x2="1000" y1="200" y2="200"></line><line stroke-dasharray="2 4" stroke-width="0.6" x1="0" x2="1000" y1="400" y2="400"></line><text fill="currentColor" font-family="monospace" font-size="9" letter-spacing="1" opacity="0.7" x="210" y="25">12° 58' 23" N</text><text fill="currentColor" font-family="monospace" font-size="9" letter-spacing="1" opacity="0.7" x="510" y="25">77° 35' 45" E</text><text fill="currentColor" font-family="monospace" font-size="9" letter-spacing="1" opacity="0.7" x="810" y="25">18° 55' 12" N</text><!-- Antique Navigational Compass Rose --><g transform="translate(880, 470)"><circle cx="0" cy="0" r="90" stroke="#deb05c" stroke-dasharray="4 3" stroke-width="1"></circle><circle cx="0" cy="0" r="76" stroke="currentColor" stroke-width="0.7"></circle><circle cx="0" cy="0" r="52" stroke="currentColor" stroke-dasharray="2 2" stroke-width="0.6"></circle><circle cx="0" cy="0" r="16" stroke="#deb05c" stroke-width="1"></circle><line stroke="currentColor" stroke-width="0.7" x1="0" x2="0" y1="-98" y2="98"></line><line stroke="currentColor" stroke-width="0.7" x1="-98" x2="98" y1="0" y2="0"></line><polygon fill="#deb05c" points="0,-85 9,-18 0,-6 -9,-18"></polygon><polygon fill="currentColor" opacity="0.8" points="0,85 9,18 0,6 -9,18"></polygon><polygon fill="currentColor" opacity="0.8" points="85,0 18,9 6,0 18,-9"></polygon><polygon fill="currentColor" opacity="0.8" points="-85,0 -18,9 -6,0 -18,-9"></polygon><polygon fill="currentColor" opacity="0.5" points="56,-56 16,-6 6,-16"></polygon><polygon fill="currentColor" opacity="0.5" points="-56,-56 -16,-6 -6,-16"></polygon><polygon fill="currentColor" opacity="0.5" points="56,56 16,6 6,16"></polygon><polygon fill="currentColor" opacity="0.5" points="-56,56 -16,6 -6,16"></polygon><text fill="#deb05c" font-family="serif" font-size="14" font-weight="bold" text-anchor="middle" x="0" y="-104">N</text><text fill="currentColor" font-family="serif" font-size="11" text-anchor="middle" x="108" y="4">E</text><text fill="currentColor" font-family="serif" font-size="11" text-anchor="middle" x="0" y="114">S</text><text fill="currentColor" font-family="serif" font-size="11" text-anchor="middle" x="-108" y="4">W</text></g></svg></div><div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center"><!-- Left Column --><div class="lg:col-span-7 space-y-space-md"><!-- Eyebrow badge --><div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#103a2a] border border-white/15 text-[#fdb471] font-label-md text-label-md shadow-xs"><span class="material-symbols-outlined text-[18px] text-[#fdb471]">explore</span><span class="tracking-wider uppercase font-semibold text-xs text-[#ffdcc0]">COMMUNITY LITERARY QUEST</span></div><!-- Main Heading --><h2 class="font-display-lg text-headline-lg lg:text-display-lg text-white font-serif leading-tight">Not All Treasures Are Buried.<br/><span class="italic text-[#F8F6F0] font-normal">Some Are Books.</span></h2><!-- Description --><p class="font-body-md text-body-md text-[#F8F6F0]/85 max-w-lg leading-relaxed">Follow weekly cryptic clues across city cafés, historic park benches, and independent bookstores. Scan concealed QR stamps on roaming volumes to unlock rare rental perks and community karma.</p><!-- 3 Reward Badges in horizontal wrap row --><div class="flex flex-wrap gap-2.5 pt-1"><div class="bg-[#19392C]/70 border border-white/20 text-[#F8F6F0] text-xs px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-xs backdrop-blur-sm"><span class="text-[#deb05c] font-bold text-[13px]">✦</span><span class="font-medium tracking-wide">500 Karma Points</span></div><div class="bg-[#19392C]/70 border border-white/20 text-[#F8F6F0] text-xs px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-xs backdrop-blur-sm"><span class="text-[14px]">📍</span><span class="font-medium tracking-wide">Clue Coordinate Drops</span></div><div class="bg-[#19392C]/70 border border-white/20 text-[#F8F6F0] text-xs px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-xs backdrop-blur-sm"><span class="text-[14px]">🗝️</span><span class="font-medium tracking-wide">Antiquarian Key Pass</span></div></div><!-- Call to action row --><div class="pt-space-xs flex flex-wrap items-center gap-4 sm:gap-6"><a class="bg-[#F8F6F0] text-[#19392C] font-semibold px-7 py-3.5 rounded-lg hover:bg-[#E9E2D5] transition shadow-md inline-flex items-center gap-2 font-label-lg text-label-lg group" data-path="treasure-hunt" href="#"><span>Start the Hunt</span><span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a><span class="text-xs text-[#F8F6F0]/70 font-['Inter']">Next clue drops Saturday at 10:00 AM IST</span></div></div><!-- Right Column: Antique Open Book & Expedition Clue Ticket --><div class="lg:col-span-5 flex flex-col items-center justify-center relative"><!-- Open Book Visual Container --><div class="relative w-full max-w-md mx-auto pt-2 pb-4"><!-- Clothbound Open Book Illustration --><div class="relative w-full h-[200px] sm:h-[220px] bg-[#103a2a] rounded-xl p-2.5 shadow-2xl border border-white/10"><!-- Book cover backing edge --><div class="absolute -inset-1 rounded-xl bg-[#091a13] -z-10 shadow-lg"></div><!-- Open Pages Surface (Left and Right) --><div class="w-full h-full flex rounded-lg overflow-hidden border border-[#d5cdbe]"><!-- Left Page --><div class="flex-1 bg-[#F4F1EA] p-3.5 sm:p-4 flex flex-col justify-between border-r border-[#d5cdbe] relative"><div class="space-y-1.5 opacity-60"><div class="h-1.5 w-16 bg-[#244C3B] rounded-full"></div><div class="h-1 w-full bg-[#1b1c18]/25 rounded"></div><div class="h-1 w-4/5 bg-[#1b1c18]/25 rounded"></div><div class="h-1 w-full bg-[#1b1c18]/25 rounded"></div><div class="h-1 w-3/4 bg-[#1b1c18]/25 rounded"></div></div><!-- Antique Bookplate stamp --><div class="border border-dashed border-[#885117]/60 rounded p-1.5 bg-[#e9e2d5]/60 text-center my-auto"><div class="text-[8px] uppercase font-mono tracking-widest text-[#885117] font-semibold">Ex Libris BookLoop</div><div class="text-[7px] text-[#77766F] font-serif italic">Circa MMXXVI</div></div><div class="text-[9px] text-[#77766F] font-serif text-center">p. 142</div></div><!-- Gold Ribbon Bookmark --><div class="absolute left-1/2 -top-2 w-3.5 h-[190px] -translate-x-1/2 bg-gradient-to-b from-[#deb05c] via-[#c9933b] to-[#b85d38] shadow-md z-20 rounded-b-sm flex flex-col justify-end"><div class="w-full h-2 bg-[#103a2a] clip-path-v" style="clip-path: polygon(0 0, 100% 0, 50% 100%);"></div></div><!-- Right Page --><div class="flex-1 bg-[#fbf9f3] p-3.5 sm:p-4 flex flex-col justify-between relative pl-4"><div class="flex items-center justify-between border-b border-[#E5E1D8] pb-1"><span class="text-[8px] uppercase tracking-wider font-mono text-[#244C3B] font-semibold">QUEST LOG</span><span class="text-[8px] font-mono text-[#77766F]">CHAPTER I</span></div><div class="space-y-1.5 opacity-50 py-1"><div class="h-1 w-full bg-[#1b1c18]/25 rounded"></div><div class="h-1 w-11/12 bg-[#1b1c18]/25 rounded"></div><div class="h-1 w-4/5 bg-[#1b1c18]/25 rounded"></div><div class="h-1 w-full bg-[#1b1c18]/25 rounded"></div></div><!-- Vintage Wax-style Seal Accent --><div class="flex items-center justify-end gap-1.5 pt-1"><div class="w-6 h-6 rounded-full bg-[#885117] border border-[#deb05c] flex items-center justify-center shadow-xs"><span class="material-symbols-outlined text-[13px] text-[#ffdcc0]">auto_stories</span></div><span class="text-[8px] font-serif italic text-[#885117]">Verified Trail</span></div><div class="text-[9px] text-[#77766F] font-serif text-right">p. 143</div></div></div></div><!-- Tactile Clue Card / Expedition Ticket (Overlapping the Book) --><div class="relative -mt-16 sm:-mt-18 mx-2 sm:mx-4 bg-[#FFFFFF] rounded-xl p-4 sm:p-5 shadow-2xl border border-[#E5E1D8] text-[#1b1c18] z-30 transform hover:-translate-y-1 transition-transform duration-300"><div class="flex items-center justify-between border-b border-dashed border-[#E5E1D8] pb-2.5 mb-3"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#244C3B] animate-ping"></span><span class="font-mono text-[11px] font-bold tracking-widest text-[#244C3B] uppercase">EXPEDITION TICKET #408</span></div><span class="px-2 py-0.5 rounded bg-surface-container font-mono text-[10px] text-on-surface-variant font-medium">ACTIVE</span></div><!-- GPS Coordinates Badge --><div class="flex items-center justify-between bg-surface-container-low px-2.5 py-1.5 rounded-lg mb-2.5 text-xs"><span class="font-label-sm text-[10px] uppercase text-[#77766F] font-bold tracking-wider">COORDINATES</span><span class="font-mono font-bold text-[#885117] text-[11px] tracking-wide">12.9716° N, 77.5946° E</span></div><!-- Clue Snippet Quote --><p class="font-serif italic text-xs sm:text-[13px] text-[#24241F] leading-snug mb-3 bg-[#f5f0e6]/70 p-2.5 rounded-lg border-l-2 border-[#244C3B]">“Where cold filter coffee meets yellowed leaves, find shelf 4B behind the vintage clock tower.”</p><!-- QR Code Box & Caption --><div class="flex items-center gap-3 pt-1 border-t border-[#E5E1D8]/70"><div class="w-11 h-11 bg-surface-container-highest rounded-lg p-1 flex items-center justify-center shrink-0 border border-[#E5E1D8]"><svg class="w-full h-full text-[#244C3B]" fill="currentColor" viewbox="0 0 24 24"><path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm-2 10h8v8H2v-8zm2 2v4h4v-4H4zm10-14h8v8h-8V2zm2 2v4h4V4h-4zm2 8h2v2h-2v-2zm-2 2h2v2h-2v-2zm4 0h2v2h-2v-2zm-2 2h2v4h-2v-4zm-2 2h2v2h-2v-2zm6-2h2v2h-2v-2zm0 2h2v2h-2v-2z"></path></svg></div><div class="min-w-0 flex-1"><p class="font-label-md text-xs font-bold text-[#244C3B]">Scan to Unlock Clue</p><p class="font-body-sm text-[11px] text-[#77766F] truncate">Point camera at recovery volume stamp</p></div><span class="material-symbols-outlined text-[18px] text-[#244C3B]">qr_code_scanner</span></div></div></div></div></div></section>
+<!-- 7. COMMUNITY & TESTIMONIALS -->
+<section class="mb-space-xl">
+<div class="text-center max-w-xl mx-auto mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">FELLOW BIBLIOPHILES</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary font-serif mt-1">More Than a Marketplace.<br/>A Community of Readers.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Reflections from readers who share our devotion to circular literature.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center text-[#D99555] mb-3">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic mb-4">
+              “Renting high-priced hardcovers for ₹40 a month has revolutionized my reading speed. The condition grading is impeccably honest.”
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+<img class="w-10 h-10 rounded-full object-cover shadow-xs" data-alt="Portrait of Aarav M., a software architect and avid literature enthusiast with warm rimmed glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4B4w8dKg3YdskuvpMLeZMUTlQJM1xWBriGikDRAdec9mOQjWAhrsQK7ddnpyUen1hIw8QzjTXQ17Dh72XpKzC7oG5bkyOegPntHNQE2VKhHJlYqKAx6p70G-3pvLUHXzY4IO_i3iUp71EyQUKQ151TekWvAH4ZRRcbL7WLfuIQ0_AQpLtPbsu-pIqu0jeH2cFvBQwy_ew0sA4jd3jjm98tXkdUGKrHFliV6ZZ33Y"/>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">Aarav M.</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Read 34 books via BookLoop • Mumbai</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center text-[#D99555] mb-3">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic mb-4">
+              “I rehomed two full cartons of academic &amp; philosophy volumes from my collection. Selling took under 5 minutes with zero haggling.”
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+<img class="w-10 h-10 rounded-full object-cover shadow-xs" data-alt="Portrait of Dr. Sunita V., an author and university professor with silver hair and an engaging smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqUjJKKCjXNHbzphZTyB1NlvlSU2P4wp3maEhWFGG2f_D3_o_q6qY8GZxYagB8rKGgaTSZjvEqt8ln_GTebSB4cJnZGNYx_CTKN7qCDPp6BZ6UsiAXgmzj45Eh7C1cNWDlXDGo1yEOuCafv-Uv2Ia1pwBsFhkawk8ppM3XjXagB3akfoJJIqJY94nFq5r0tR5CJa6xBJ0VOkj7kzAu-c1tVFz05fjUwzBwzTgwdu4"/>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">Dr. Sunita V.</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Archival Seller • New Delhi</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center text-[#D99555] mb-3">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic mb-4">
+              “The Book Treasure Hunt led me to an antique alleyway bookstore in Bandra I never knew existed. Found a signed copy within 20 minutes!”
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+<img class="w-10 h-10 rounded-full object-cover shadow-xs" data-alt="Portrait of Devika N., an independent filmmaker and enthusiastic collector of translated literature" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi7x7i26dZJxvH-xMCRFNaFLHjQEMxia9SHT3IiBpEsvCHD2YoKeVDLvyv0Qcunc-2Bly6kf60KvLmHiKXrmQs2egjpzuk_Dnwp6G_L_wF5oYurhWhn9gP1RfINudTG1HYh5sVXChwzt_AovLCzwr0j8kNBy26DsvDe30_I3q-8lED2w702XwGXi6Rs0yLrRhET-uDMHm622Py-gfQberkgQqtxQVzg4RjPdrGMPE"/>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">Devika N.</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Master Pathfinder • Pune</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Micro-Script for Toggles and Wishlist -->
+<script>
+      (function() {
+        // Buy/Rent Toggle Interaction
+        const toggles = document.querySelectorAll('.buy-rent-toggle');
+        toggles.forEach(btn => {
+          btn.addEventListener('click', () => {
+            toggles.forEach(b => {
+              b.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-xs');
+              b.classList.add('text-on-surface-variant');
+            });
+            btn.classList.add('bg-primary-container', 'text-on-primary', 'shadow-xs');
+            btn.classList.remove('text-on-surface-variant');
+          });
+        });
+
+        // Wishlist Heart Animation
+        const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+        wishlistButtons.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const icon = btn.querySelector('.material-symbols-outlined');
+            if (icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1")) {
+              icon.style.fontVariationSettings = "'FILL' 0";
+              icon.classList.remove('text-error');
+            } else {
+              icon.style.fontVariationSettings = "'FILL' 1";
+              icon.classList.add('text-error');
+              btn.classList.add('scale-125');
+              setTimeout(() => btn.classList.remove('scale-125'), 200);
+            }
+          });
+        });
+      })();
+    </script>
+</div>
+</div></main><footer class="w-full bg-[#F4F1EA] border-t border-[#E5E1D8] pt-space-xl pb-space-lg"><div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl border-b border-[#E5E1D8]"><div class="lg:col-span-4 space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="BOOKLOOP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAg6qVcWlRBtsAUlPS13wtqi_2AAncCnYhWZ3LiPYAGzAMoJgwCtQ2AK_3pC0vFF_MrUGspyWlmVT6LnEQsYEqQv5EfjvjJ7yf7N1PBZFqDj7vMtwOyOPkiZOnbLMikvel11Fu76-Q0AIn-1yyRb3jTvRrxH8alnPsasxtIRAmRqTMIT4EfY0YmBOoWL7y6KESoEp_QatpvEBqlWa-Vab8SilN2imdlSNnVymxRJB_u"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-serif">BOOKLOOP</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Read More, Spend Less, Share Stories.</p><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">The antiquarian spirit meets circular literature. Rehoming, renting, and discovering fine editions with care.</p></div><div class="lg:col-span-2 space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider">Explore</h3><ul class="space-y-2"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-books" href="#">Curated Editions</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-books" href="#">Antiquarian &amp; Rare</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="treasure-hunt" href="#">Treasure Hunt</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-books" href="#">Rental Shelves</a></li></ul></div><div class="lg:col-span-2 space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider">Community</h3><ul class="space-y-2"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="sell-a-book" href="#">Sell a Book</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Readers' Salon</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Book Exchange Club</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Collector Spotlights</a></li></ul></div><div class="lg:col-span-4 space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider">The Reading Dispatch</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Receive notes on antiquarian acquisitions, seasonal rentals, and literary treasures.</p><form class="flex items-center gap-space-xs pt-1"><div class="relative flex-1"><input class="w-full h-11 px-space-md bg-surface-container-lowest border border-[#E5E1D8] rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container transition-colors" placeholder="Your email address" type="email"/></div><button class="h-11 px-space-md bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center shrink-0" type="button">Subscribe</button></form></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><p>© 2026 BookLoop. Read More, Spend Less, Share Stories.</p><div class="flex items-center gap-space-lg font-label-md text-label-md"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Rental &amp; Sale</a><a class="hover:text-on-surface transition-colors" href="#">Condition Standards</a></div></div></div></footer></body></html>

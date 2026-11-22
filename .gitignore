@@ -1,0 +1,18 @@
+
+# Private credentials
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Netlify local files
+.netlify/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/

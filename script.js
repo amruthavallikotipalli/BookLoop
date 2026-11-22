@@ -1056,7 +1056,7 @@ document.addEventListener('DOMContentLoaded', () => {
       container.innerHTML = `
         <div class="drawer-empty-state">
           <div class="drawer-empty-icon">
-            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <img src="assets/stickers/heart.png" alt="" class="sticker-icon" style="width: 44px; height: 44px; object-fit: contain;" />
           </div>
           <h4 class="drawer-empty-title">Your wishlist is empty</h4>
           <p class="drawer-empty-desc">Tap the heart on any book to save it for later.</p>
@@ -1226,7 +1226,7 @@ document.addEventListener('DOMContentLoaded', () => {
       container.innerHTML = `
         <div class="drawer-empty-state">
           <div class="drawer-empty-icon">
-            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <img src="assets/stickers/cart.png" alt="" class="sticker-icon" style="width: 44px; height: 44px; object-fit: contain;" />
           </div>
           <h4 class="drawer-empty-title">Your bag is empty</h4>
           <p class="drawer-empty-desc">Find books to buy or rent for a few weeks.</p>
